@@ -5,8 +5,8 @@ import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
 
 const App= () => {
     return (    
-        <Navbar bg="light" expand="lg">
-  <Container>
+        <Navbar bg="" expand="lg">
+  <div className="app">
     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
@@ -22,7 +22,7 @@ const App= () => {
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
-  </Container>
+  </div>
 </Navbar>
     );
 }
