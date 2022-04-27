@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
-
+import Home from './homepage/homepage'
 
 
 const App= () => {
     return (    
+      <>
         <Navbar bg="light" expand="lg">
   <Container>
     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -24,6 +25,10 @@ const App= () => {
     </Navbar.Collapse>
   </Container>
 </Navbar>
+
+<Home/>
+      </>
+
     );
 }
 
