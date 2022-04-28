@@ -46,7 +46,9 @@ const Login = () => {
                             <div>
                                 <img src={pass} alt="pass" className="pass"/>
                                  <input type="text" placeholder="password" className="pass"/> 
+                                 <p>Don't have an aacount? Sign Up</p>
                             </div>
+                            <button>Login</button>
                         </div>
                     </div>
                 </div>
