@@ -24,7 +24,7 @@ const Home = () => {
                 <div className="col-md-6">
                     <img className="box" src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGFja2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt=""></img>
                 </div>
-                <div className="col-md-6">
+                <div className="description col-md-6">
                     <h1>Cut the struggle of finding a secure storage during transition</h1>
                     <p>Ever got stuck with your goods or luggage due to the lack of a reliable storage company?</p>
                     <p>Were are here for you</p>
