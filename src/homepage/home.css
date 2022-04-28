@@ -52,3 +52,12 @@ hr{
     border-radius: 30px;
     background-image: linear-gradient(to right, hsl(39, 100%, 50%), rgb(13, 13, 104));
 }
+
+/* Testimonials section */
+.card {
+    width: 350px;
+}
+.card-img-top{
+    height: 250px;
+    border-radius: 100%;
+}

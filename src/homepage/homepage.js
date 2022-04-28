@@ -1,5 +1,23 @@
 import React from 'react';
 
+const Card = (props) => {
+    return (
+        <>
+            <div className="card">
+                <img
+                    src={props.src}
+                    className="card-img-top"
+                    alt="..."
+                />
+                <div className="card-body">
+                    <h5 className="card-title">{props.name}</h5>
+                    <p className="card-text">{props.text}</p>
+                </div>
+            </div>
+        </>
+    )
+}
+
 const Home = () => {
     return (
         <>
@@ -35,14 +53,11 @@ const Home = () => {
         </div>
         <div className="container-fluid testimonial">
             <h1>What our Esteemed Clients are Saying</h1>
-            <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+            <Card src={'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
+            <Card src={'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet amet sur jitr opium"}/>
+            <Card src={'https://freerangestock.com/sample/116474/man-avatar-.jpg'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr"}/>
+            <Card src={'https://i.pinimg.com/474x/57/70/ab/5770ab4f9edf4b18bbf7f420c94c1488.jpg'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet"}/>
+
         </div>
         <footer>
             <div className="social-icons">
