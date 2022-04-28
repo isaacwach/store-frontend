@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Row, Container} from "react-bootstrap";
 import profile from "../images/profile.png"
 import email from "../images/message.jpg"
-import pass from "../images/lock.jpg"
+import pass from "../images/pass.jpg"
 
 const Login = () => {
     return (
@@ -33,7 +33,20 @@ const Login = () => {
                 <div className="sub-main">
                     <div>
                         <div className="imgs">
-                            <div className="container-image"></div>
+                            <div className="container-image">
+                                <img src={profile} alt="profile" className="profile"/>
+                            </div>
+                        </div>
+                        <div>
+                            <h1>Login Page</h1>
+                            <div>
+                                <img src={email} alt="email" className="email"/>
+                                 <input type="text" placeholder="username" className="name"/> 
+                            </div>
+                            <div>
+                                <img src={pass} alt="pass" className="pass"/>
+                                 <input type="text" placeholder="password" className="pass"/> 
+                            </div>
                         </div>
                     </div>
                 </div>
