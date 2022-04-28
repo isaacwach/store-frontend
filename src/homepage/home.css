@@ -48,7 +48,7 @@
 .description p{
     font-size: 22px;
 }
-hr{
+.line1{
     border-radius: 30px;
     background-image: linear-gradient(to right, hsl(39, 100%, 50%), rgb(13, 13, 104));
 }
@@ -60,4 +60,25 @@ hr{
 .card-img-top{
     height: 250px;
     border-radius: 100%;
+}
+.mycard{
+    box-shadow:0 15px rgb(231, 230, 230);
+}
+.test-cards{
+    padding: 0px 100px 0px 120px;
+}
+.line2{
+    color: #ffae00;
+    margin: auto;
+}
+.testimonial h1 {
+    color: orange;
+    font-size: 58px;
+    text-align: center;
+}
+.testimonial h3 {
+    text-align: center;
+    font-size: 44px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
