@@ -1,10 +1,13 @@
 import React from 'react';
 import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
-
+import "./App.css"
+import Booking from "./booking/booking.js"
 
 
 const App= () => {
-    return (    
+    return ( 
+        <> 
+        <div>
         <Navbar bg="light" expand="lg">
   <Container>
     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -24,6 +27,9 @@ const App= () => {
     </Navbar.Collapse>
   </Container>
 </Navbar>
+<Booking />
+</div>
+</>
     );
 }
 
