@@ -8,6 +8,7 @@ import SignUp from './components/signup.component'
 
 const App= () => {
     return (  
+        <Router>
         <div className="app">  
             <Navbar collapseOnSelect fixed="top" bg="dark" variant="dark" expand="sm">
                 <Container>
@@ -25,6 +26,16 @@ const App= () => {
                 </Container>
             </Navbar>
         </div>
+        <div className="auth-wrapper">
+        <div className="auth-inner">
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route path="/sign-in" element={<Login />} />
+            <Route path="/sign-up" element={<SignUp />} />
+          </Routes>
+        </div>
+      </div>
+      </Router>
         
 
     );
