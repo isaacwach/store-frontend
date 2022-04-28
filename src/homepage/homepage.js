@@ -25,6 +25,7 @@ const Home = () => {
                     <img className="box" src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGFja2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt=""></img>
                 </div>
                 <div className="description col-md-6">
+                    <hr size="10" width="280px" color="orange"></hr> 
                     <h1>Cut the struggle of finding a secure storage during transition</h1>
                     <p>Ever got stuck with your goods or luggage due to the lack of a reliable storage company?</p>
                     <p>Were are here for you</p>
@@ -34,6 +35,14 @@ const Home = () => {
         </div>
         <div className="container-fluid testimonial">
             <h1>What our Esteemed Clients are Saying</h1>
+            <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
         </div>
         <footer>
             <div className="social-icons">
