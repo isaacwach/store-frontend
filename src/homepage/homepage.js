@@ -36,7 +36,7 @@ const Home = () => {
                 </div>
                 </div>
                 <div className="col-md-6"> 
-                    <img className="shelves" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjPegq1vSEzFS2bswVdpzNBK1hBNowk1m4Q&usqp=CAU" alt=""></img>
+                    <img className="shelves" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcxwj0yCkum1HJtNkWX2_cmndrrVoP_z0pg&usqp=CAU" alt=""></img>
                 </div>
 
             </div>
@@ -57,7 +57,7 @@ const Home = () => {
         </div>
         <div className="container-fluid testimonial">
             <h1>Testimonials</h1>
-            <hr className="line2"size="10" width="280px" color="orange"></hr> 
+            <hr className="line2"size="10" width="220px" color="orange"></hr> 
             <h3>What our Esteemed Clients are Saying</h3>
             <div className="row test-cards">
                 <div className="col-md-3">
