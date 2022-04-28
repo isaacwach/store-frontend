@@ -1,5 +1,8 @@
 import React from "react";
 import { Col, Row, Container} from "react-bootstrap";
+import profile from "../images/profile.png"
+import email from "../images/message.jpg"
+import pass from "../images/lock.jpg"
 
 const Login = () => {
     return (
@@ -26,6 +29,15 @@ const Login = () => {
                     </Col>
                 </Row>
             </Container>
+            <div className="main">
+                <div className="sub-main">
+                    <div>
+                        <div className="imgs">
+                            <div className="container-image"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     
     );

@@ -15,7 +15,7 @@ const App= () => {
                                 <Nav.Link href="#home">Home</Nav.Link>
                                 <Nav.Link href="#link"></Nav.Link>
                                 <Nav.Link href="#link">Sign Up</Nav.Link>
-                                <Nav.Link href="#link">Sing In</Nav.Link>
+                                <Nav.Link href="#link">Login</Nav.Link>
                               
                             </Nav>
                         </Navbar.Collapse>
