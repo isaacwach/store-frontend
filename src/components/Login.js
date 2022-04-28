@@ -3,8 +3,8 @@ import { Col, Row, Container} from "react-bootstrap";
 import './Login.css';
 import profile from "../images/profile.png"
 import uiImg from "../images/login.svg"
-import email from "../images/message.jpg"
-import pass from "../images/pass.jpg"
+
+
 
 const LoginPage = () => {
     return (
