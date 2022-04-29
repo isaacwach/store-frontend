@@ -1,5 +1,6 @@
 import React from 'react';
 import Popup from '../popup/popup';
+import { useState } from 'react';
 
 const Card = (props) => {
     return (
@@ -23,24 +24,37 @@ const Card = (props) => {
     )
 }
 
-const Home = () => {
+const Home = (props) => {
+    const [buttonPopup, setButtonPopup]=useState(false);
     return (
         <>
-        <div className="container-fluid Hero">
-            <div className="row">
+        <div className="container-fluid hero">
+            <div className="row flex-column-reverse flex-sm-row">
                 <div className="intro col-md-6"> 
                 <h1>Welcome to Classic Store</h1>
                 <h2>Book a safe storage on a button click</h2>
                 <div className='buttons'>
-                    <button className="btn btn-warning">Personal Booking</button>
+                    <button className="btn btn-warning" onClick={ () => setButtonPopup(true)}>Personal Booking</button>
                     <button className="btn btn-secondary">Business Booking</button>
-                    <Popup>
-                        <p>Fill in Details</p>
-                        <form>
-                        <label>Enter your name:
-                            <input type="text" />
-                        </label>
-                        </form>
+                    <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
+                        <div className="pop-form">
+                            <form className="form1">
+                                <h3>Fill in Your Details</h3>
+                                <label>Fullname:<br/>
+                                    <input className="fname" type="text" placeholder="Enter your fullname"/>
+                                </label><br/>
+                                <label>Move in date:<br/>
+                                    <input id='date' type="date" />
+                                </label><br/>
+                                <label>Expected move our date:<br/>
+                                    <input id='date' type="date" />
+                                </label>
+                                <div className="form-buttons"> 
+                                    <button className="btn-btn1">Submit</button>
+                                    <button className="btn-btn2" onClick={() => props.setTrigger(false)} >Close</button>
+                                </div>
+                            </form>
+                        </div>
                        
                     </Popup>
                 </div>
@@ -70,10 +84,10 @@ const Home = () => {
             <hr className="line2"size="10" width="220px" color="orange"></hr> 
             <h3>What our Esteemed Clients are Saying</h3>
             <div className="row test-cards">
-                <div className="col-md-3">
+                <div className="col-md-3 col-xs-6">
                     <Card src={'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 col-xs-6">
                     <Card src={'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet amet sur jitr opium"}/>
                 </div>
                 <div className="col-md-3">

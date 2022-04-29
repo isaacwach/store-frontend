@@ -7,6 +7,7 @@ import App from './App';
 import "./homepage/home.css";
 import "./footer/footer.css"
 import "./navbar/navbar.css"
+import "./popup/popup.css"
 
 
 import './booking/booking.css';
