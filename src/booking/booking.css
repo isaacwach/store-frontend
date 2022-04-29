@@ -1,0 +1,64 @@
+.booking-hero{
+
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    background-image: url(/bookinghero.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background: rgba(86, 84, 84, 0.8);
+
+    
+    /* opacity: 0.5; */
+}
+
+.booking-hero h2 {
+    color:rgb(255, 149, 0);
+}
+
+Button {
+    border-radius: 12px;
+}
+
+/* Rectangle 6 */
+
+/* position: absolute;
+width: 1836px;
+height: 482px;
+left: -2px;
+top: 110px; */
+
+
+
+/* Booking form styles */
+
+.Booking-Form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .Booking-Form label {
+    text-align: left;
+    display: block;
+  }
+  .Booking-Form h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 30px;
+  }
+  .Booking-Form input, .create textarea, .create select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+  .Booking-Form Button {
+    background:rgb(255, 149, 0);
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
