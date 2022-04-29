@@ -1,6 +1,7 @@
 import React from 'react';
 // import bookinghero from './bookinghero.jpeg'
 import {Card, Button} from 'react-bootstrap';
+import BookingForm from './form';
 
 const Booking = () => {
 
@@ -33,7 +34,7 @@ const Booking = () => {
                         <Button style={{backgroundColor:"rgb(235, 173, 18)",borderRadius:"12px"}} >Book Now</Button>
                     </Card.Body>
                 </Card>
-
+                <BookingForm />
             </div>
         </div>
         </>
