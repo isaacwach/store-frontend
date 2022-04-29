@@ -1,4 +1,5 @@
 import React from 'react';
+import Popup from '../popup/popup';
 
 const Card = (props) => {
     return (
@@ -33,6 +34,15 @@ const Home = () => {
                 <div className='buttons'>
                     <button className="btn btn-warning">Personal Booking</button>
                     <button className="btn btn-secondary">Business Booking</button>
+                    <Popup>
+                        <p>Fill in Details</p>
+                        <form>
+                        <label>Enter your name:
+                            <input type="text" />
+                        </label>
+                        </form>
+                       
+                    </Popup>
                 </div>
                 </div>
                 <div className="col-md-6"> 
