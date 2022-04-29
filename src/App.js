@@ -1,4 +1,5 @@
 import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -16,10 +17,11 @@ const App= () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav>
-                                <Nav.Link href="#home">Home</Nav.Link>
-                                <Nav.Link href="#link">Service</Nav.Link>
-                                <Nav.Link href="#link">Sign Up</Nav.Link>
-                                <Nav.Link href="#link">Login</Nav.Link>
+                                <Nav.Link href="home">Home</Nav.Link>
+                                <Nav.Link href="Service">Service</Nav.Link>
+                                <Nav.Link href="Signup">Sign Up</Nav.Link>
+                                <Nav.Link href="login">Login</Nav.Link>
+                                <Nav.Link href="login">Storage Details</Nav.Link>
                               
                             </Nav>
                         </Navbar.Collapse>
@@ -30,8 +32,9 @@ const App= () => {
         <div className="auth-inner">
           <Routes>
             <Route exact path="/" element={<Login />} />
-            <Route path="/sign-in" element={<Login />} />
-            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            {/* <Route path="storagedetails" element={<StorageDetails />} /> */}
           </Routes>
         </div>
       </div>

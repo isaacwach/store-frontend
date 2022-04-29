@@ -55,5 +55,6 @@ body, html, .App, #root, .auth-wrapper {
   margin: 0;
 }
 .forgot-password a {
-  color: #167bff;
+  color: orange;
+  text-decoration: none;
 }
