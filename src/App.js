@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
 import "./App.css"
-import Booking from "./booking/booking.js"
+import Booking from "./booking/booking.js";
+import Admin from "./admin/admin.js";
 
 
 const App= () => {
@@ -28,6 +29,7 @@ const App= () => {
   </Container>
 </Navbar>
 <Booking />
+<Admin />
 </div>
 </>
     );
