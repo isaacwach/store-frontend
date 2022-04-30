@@ -2,15 +2,14 @@ import React from 'react';
 // import bookinghero from './bookinghero.jpeg'
 import {Card, Button} from 'react-bootstrap';
 import BookingForm from './form';
+import TransportForm from '../transport/transport';
 
 const Booking = () => {
 
     return ( 
         <>
         <div className="booking" >
-            {/* <div>
-            <img src={'/bookinghero.jpeg'} />
-            </div> */}
+    
             <div className="booking-hero text-center" >
 
                 <h2> Welcome to our online store </h2>
@@ -22,7 +21,6 @@ const Booking = () => {
             <div className="storage">
                 <h2 className="text-center" > Our Storage Solutions</h2>
                 <Card style={{ width: '18rem' }}>
-                    {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                     <Card.Body>
                         <Card.Title>Unit: pk22</Card.Title>
                         <Card.Text>
@@ -31,10 +29,11 @@ const Booking = () => {
                         <p>Category: Small </p>
                         <p>Status: Available</p>
                         </Card.Text>
-                        <Button style={{backgroundColor:"rgb(235, 173, 18)",borderRadius:"12px"}} >Book Now</Button>
+                        <Button  className="btn"style={{backgroundColor:"rgb(235, 173, 18)",borderRadius:"12px"}} >Book Now</Button>
                     </Card.Body>
                 </Card>
                 <BookingForm />
+                <TransportForm />
             </div>
         </div>
         </>
