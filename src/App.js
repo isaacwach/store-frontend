@@ -33,11 +33,33 @@ const App= () => {
 </Router>
 <Footer />
 
+
       </>
         
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import './App.css';
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// import Login from './components/login.component';
+// import SignUp from './components/signup.component';
+
+
+//         <div className="auth-wrapper">
+//         <div className="auth-inner">
+//           <Routes>
+//             <Route exact path="/" element={<Login />} />
+//             <Route path="/login" element={<Login />} />
+//             <Route path="/signup" element={<SignUp />} />
+//             {/* <Route path="storagedetails" element={<StorageDetails />} /> */}
+//           </Routes>
+//         </div>
+//       </div>
+//       </Router>
 
     );
-}
+
+}; 
 
 
-export default App;
+export default App ;
