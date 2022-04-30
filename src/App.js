@@ -15,7 +15,7 @@ const App= () => {
                 <Container>
                     <Navbar.Brand href="#home">Logo</Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        <Navbar.Collapse id="responsive-navbar-nav">
+                        <Navbar.Collapse id="responsive-navbar-nav"/>
                             <Nav>
                                 <Nav.Link href="home">Home</Nav.Link>
                                 <Nav.Link href="Service">Service</Nav.Link>
@@ -24,7 +24,6 @@ const App= () => {
                                 <Nav.Link href="login">Storage Details</Nav.Link>
                               
                             </Nav>
-                        </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>
