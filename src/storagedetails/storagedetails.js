@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
-export default class StorageDetails extends Component {
-  render() {
-    return(
-      
+import React from 'react'
+import './storagedetails.css'
+
+
+const StorageDetails = () => {
+  return(
+    <>
       <main>
         <div className='container'>
           <div className='cover'></div>
@@ -32,7 +34,7 @@ export default class StorageDetails extends Component {
           </div>
         </div>
       </main>
-    )
-  }
+    </>
 
-} 
+  )
+}
