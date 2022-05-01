@@ -12,6 +12,7 @@ const NavbarHead = () => {
                     <Nav.Link className="home" href="#home">Home</Nav.Link>
                     <button className="btn3">Signup</button>
                     <button className="btn4">Login</button>
+                    <button className="btn5">Storage Details</button>
                 </Nav>
             </Navbar.Collapse>
             </Container>

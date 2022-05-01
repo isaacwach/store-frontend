@@ -1,24 +1,15 @@
-import React from 'react'
-import {Button, Col, Container, Row } from "react-bootstrap"
-import './signup.css'
-import uiImage from '../../public/images/login.svg'
+import React from 'react';
+import {Button, Col, Container, Row,  Form} from "react-bootstrap";
 
-const SignUp = () => {
+const Login = () => {
   return(
     <>
       <Container>
+        <br></br>
         <Row>
           <Col lg={4} md={6} sm={12}>
-
+            <img src='/images/profile.png' alt='profileicon'/>
             <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>First Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter First Name" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter Last Name" />
-              </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -34,18 +25,18 @@ const SignUp = () => {
               <p className="forgot-password text-right">
                 Forgot <a href="#">password?</a>
               </p>
-              <Button variant="primary btn-primary" type="submit">
+              <button className="myGrey" type="submit">
                 Login
-              </Button>
+              </button>
               <div>
                 <p className="forgot-password text-right">
-                Already have an account <a href="/login">login?</a>
+                Dont have an account? <a href="/SignUp">Sign Up</a>
                 </p>
               </div>
             </Form>
           </Col>
           <Col lg={8} md={6} sm={12}>
-            <img className='w-100' src='uiImage'/>
+            <img className='w-100' height="700px" src='images/signup.svg'/>
           </Col>
         </Row>
 
@@ -53,3 +44,5 @@ const SignUp = () => {
     </>
   )
 }
+
+export default Login;

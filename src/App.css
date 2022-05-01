@@ -1,81 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800&display=swap');
-* {
-  box-sizing: border-box;
-}
-body {
-  background: rgb(139, 137, 137) !important;
-  min-height: 100vh;
-  display: flex;
-  font-weight: 400;
-  font-family: 'Fira Sans', sans-serif;
-}
-h1,h2,h3,h4,h5,h6,label,span {
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-}
-body, html, .App, #root, .auth-wrapper {
-  width: 100%;
-  height: 100%;
-}
 
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-.auth-inner {
-  width: 750px;
+.myGrey{
+  color: black;
+  background-color: rgb(185, 184, 183);
+  border-color:rgb(187, 181, 181);
+  padding: 3px 6px;
   margin: auto;
-  background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-  padding: 40px 55px 45px 55px;
-  border-radius: 15px;
-  transition: all .3s;
-}
-.auth-wrapper .form-control:focus {
-  border-color: grey;
-  box-shadow: none;
-}
-.auth-wrapper h3 {
   text-align: center;
-  margin: 0;
-  line-height: 1;
-  padding-bottom: 20px;
-}
-.custom-control-label {
-  font-weight: 600;
-}
-.forgot-password,
-.forgot-password a {
-  text-align: right;
-  font-size: 22px;
-  padding-top: 10px;
-  color: black;
-  margin: 0;
-}
-.forgot-password a {
-  color: rgb(160, 60, 14);
-  text-decoration: none;
-  font-size: 22px;
-}
-.button{
-  background-color: grey ;
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
+  cursor: pointer;
+  transition: all 0.3s 0s ease-in-out;
   font-size: 24px;
   border-radius: 12px;
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
-}
-.button:hover {
-  background-color: #ff73008f; 
-  color: white;
+  width: 50%;
 }
 
+body{
+align-items: center;
+padding-top: 40px;
+padding-bottom: 40px;
+background-color: #f5f5f5;
+text-align:center;
+padding: 15px;
+font-size: 16px;
+margin: 15px;
+width: 100%;
+height: 720px;
+padding-top: 60px;
+}
 
+.container-storage{
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+
+}
