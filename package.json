@@ -2,6 +2,7 @@
   "name": "store-center",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://store58.herokuapp.com/api/storage/unit/", 
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",

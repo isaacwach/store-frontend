@@ -1,0 +1,16 @@
+.card-span{
+    background: -webkit-linear-gradient(rgb(224, 130, 8), rgb(11, 4, 119));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 550;
+}
+.task-wrapper{
+    font-size: 25px;
+    font-weight: bold;
+}
+.card-title{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 145, 0);
+    margin-bottom: 20px;
+}
