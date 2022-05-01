@@ -1,6 +1,4 @@
 import React from 'react';
-import Popup from '../popup/popup';
-import { useState } from 'react';
 
 const Card = (props) => {
     return (
@@ -25,7 +23,6 @@ const Card = (props) => {
 }
 
 const Home = (props) => {
-    const [buttonPopup, setButtonPopup]=useState(false);
     return (
         <>
         <div className="container-fluid hero">
@@ -34,29 +31,8 @@ const Home = (props) => {
                 <h1>Welcome to Classic Store</h1>
                 <h2>Book a safe storage on a button click</h2>
                 <div className='buttons'>
-                    <button className="btn btn-warning" onClick={ () => setButtonPopup(true)}>Personal Booking</button>
+                    <button className="btn btn-warning">Personal Booking</button>
                     <button className="btn btn-secondary">Business Booking</button>
-                    <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
-                        <div className="pop-form">
-                            <form className="form1">
-                                <h3>Fill in Your Details</h3>
-                                <label>Fullname:<br/>
-                                    <input className="fname" type="text" placeholder="Enter your fullname"/>
-                                </label><br/>
-                                <label>Move in date:<br/>
-                                    <input id='date' type="date" />
-                                </label><br/>
-                                <label>Expected move our date:<br/>
-                                    <input id='date' type="date" />
-                                </label>
-                                <div className="form-buttons"> 
-                                    <button className="btn-btn1">Submit</button>
-                                    <button className="btn-btn2" onClick={() => props.setTrigger(false)} >Close</button>
-                                </div>
-                            </form>
-                        </div>
-                       
-                    </Popup>
                 </div>
                 </div>
                 <div className="col-md-6"> 

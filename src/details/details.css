@@ -24,3 +24,8 @@
     padding: 200px;
     border: 2px solid red;
 }
+.btn-details{
+    font-size: 20px;
+    background-image: linear-gradient(to right, red , yellow);
+    color: rgb(7, 7, 7);
+}
