@@ -52,7 +52,7 @@ class Storage extends React.Component {
           {tasks.map(function(task, index){
             return(
               <div key={index} className="task-wrapper flex-wrapper">
-                <Card style={{ width: '22rem' }}>
+                <Card style={{ width: '28rem' }} className="detail-card">
                   <Card.Body>
                     <Card.Title className='card-title'>Storage Details</Card.Title>
                     <Card.Text>Unit size:  <span className="card-span">{task.size}</span></Card.Text>
