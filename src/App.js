@@ -2,11 +2,12 @@ import React from 'react';
 import Home from './homepage/homepage'
 import Footer from './footer/footer'
 import NavbarHead from './navbar/navbar'
-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import "./App.css"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Booking from "./booking/booking.js";
 import Admin from "./admin/admin.js";
 import GetBookings from './requests/request';
+import Login from './components/login.component';
+import SignUp from './components/signup.component';
 
 
 const App= () => {
@@ -29,6 +30,13 @@ const App= () => {
 <Route path='/sbooking'>
   <GetBookings />
 </Route>
+<Route path='/login'>
+  <Login />
+</Route>
+<Route path='/signup'>
+  <SignUp />
+</Route>
+
 </Switch>
 </Router>
 <Footer />
@@ -57,9 +65,9 @@ const App= () => {
 //       </div>
 //       </Router>
 
-    );
+    )
 
-}; 
+} 
 
 
 export default App ;
