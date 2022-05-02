@@ -5,9 +5,10 @@ import ReactDom from 'react-dom/client';
 import App from './App';
 
 import "./homepage/home.css";
-import "./footer/footer.css"
-import "./navbar/navbar.css"
-
+import "./footer/footer.css";
+import "./navbar/navbar.css";
+import "./Login/Login.css";
+import "./SignUp/SignUp.css";
 
 import './booking/booking.css';
 import './admin/admin.css';
