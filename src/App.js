@@ -2,7 +2,10 @@ import React from 'react';
 import Home from './homepage/homepage'
 import Footer from './footer/footer'
 import NavbarHead from './navbar/navbar'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Details from './details/details'
+import "./App.css"
+import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import Booking from "./booking/booking.js";
 import Admin from "./admin/admin.js";
 import GetBookings from './requests/request';
@@ -19,6 +22,9 @@ const App= () => {
   <Switch>
     <Route exact path='/'>
 <Home />
+<Footer />
+<Details />
+
 </Route>
 <Route path='/booking'>
 
