@@ -1,15 +1,17 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Container, Navbar,Nav } from 'react-bootstrap';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Login from './components/login.component';
-import SignUp from './components/signup.component';
+import SignUp from './SignUp/SignUp';
+import Login from './Login/Login.js';
+import StorageDetails from './StorageDetails/StorageDetails';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
 
 const App= () => {
     return (  
-        <Router>
+      <Router>
         <div className="app">  
             <Navbar collapseOnSelect fixed="top" bg="dark" variant="dark" expand="sm">
                 <Container>
@@ -21,22 +23,25 @@ const App= () => {
                                 <Nav.Link href="Service">Service</Nav.Link>
                                 <Nav.Link href="Signup">Sign Up</Nav.Link>
                                 <Nav.Link href="login">Login</Nav.Link>
-                                <Nav.Link href="login">Storage Details</Nav.Link>
+                                <Nav.Link href="StorageDetails">Storage Details</Nav.Link>
                               
                             </Nav>
                 </Container>
             </Navbar>
         </div>
-        <div className="auth-wrapper">
-        <div className="auth-inner">
-          <Routes>
-            <Route exact path="/" element={<Login />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            {/* <Route path="storagedetails" element={<StorageDetails />} /> */}
-          </Routes>
-        </div>
-      </div>
+            <div className='content'>
+                <Switch>
+                    <Route path="/login">
+                        <Login/>
+                    </Route>
+                    <Route path="/signup">
+                        <SignUp/>
+                    </Route>
+                    <Route path="/storagedetails">
+                        <StorageDetails/>
+                    </Route>
+                </Switch>
+            </div>
       </Router>
 
     );
