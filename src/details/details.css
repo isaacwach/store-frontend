@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 .card-span{
     background: -webkit-linear-gradient(rgb(224, 130, 8), rgb(11, 4, 119));
     -webkit-background-clip: text;
