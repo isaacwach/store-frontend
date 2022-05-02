@@ -20,7 +20,12 @@
     color: white;
 }
 .home{
-    margin-left: 666px;
+    margin-left: 550px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.details{
+    margin-left: 50px;
     font-size: 24px;
     font-weight: bold;
 }
