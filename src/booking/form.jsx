@@ -4,22 +4,25 @@ import React from "react";
 const BookingForm = () => {
     const [start_date, setStartDate]=useState()
     const [exit_date, setExitDate]=useState()
-    // const [unit, setUnit]=useState('3399')
-    // const [pickup, setPickup]=useState('')
-    const [type_of_goods, setTypeOfGoods]=useState('')
+    const [client_name, setClientName]=useState()
+    const [price, setPrice]=useState()
+    // const [storage, setStorage]= useState('Drama')
+    // const [transport, setTransport]= useState('sieva')
+    // const [client, setClent] = useState('felo')
+    const [types_of_goods, setTypeOfGoods]=useState('')
     const [description, setDescription]=useState('')
 
     const API_URL = 'https://store58.herokuapp.com/api/booking/'
 
     const handleSubmit= (e) => {
         e.preventDefault();
-        const booking= {type_of_goods, start_date, exit_date, description };
+        const booking= {types_of_goods, start_date, exit_date, description, client_name, price};
         fetch(`${API_URL}`, {
             method: 'POST',
-            mode:'no-cors',
-            headers: {"Content-Type": "application/json", 'Authorization': '8db2657061036484a4ec19b23b13b82e47d8f874'},
-            body: JSON.stringify(booking)
-        }).then( ()=> {
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(booking)}
+            )
+            .then( ()=> {
             console.log('New booking made!');
             console.log(JSON.stringify(booking))
         })
@@ -49,8 +52,19 @@ const BookingForm = () => {
                 value={exit_date}
                 onChange={(e)=>{setExitDate(e.target.value)}} />
                 </div>
+
+                <div className="form-group">
+                    <label>Client name</label>
+                    <input className="form-control"
+                    type="text"
+                    required
+                    value={client_name}
+                    onchange={(e=>{setClientName(e.target.value)})}
+                     />
+                     </div>
+
                 {/* <div className="form-group">
-                <label> Storage unit* </label>
+                <label> Storage * </label>
                 <input  className="form-control"
                 type="text"
                 required
@@ -58,13 +72,23 @@ const BookingForm = () => {
                 onchange={(e)=>{setUnit(e.target.value)}} />
                 </div> */}
 
+                <div className="form-group">
+                    <label>Price</label>
+                    <input className="form-control"
+                    type="number"
+                    required
+                    value={price}
+                    onchange={(e=>{setPrice(e.target.value)})}
+                     />
+                     </div>
+
 
                 <div className="form-group">
                 <label> Type of goods: * </label>
                 <input  className="form-control"
                 type="text"
                 required
-                value={type_of_goods}
+                value={types_of_goods}
                 onChange={(e)=>{setTypeOfGoods(e.target.value)}} />
                 </div>
                
@@ -74,13 +98,11 @@ const BookingForm = () => {
                 type="text"
                 required
                 value={description}
-                onchange={(e)=>{setDescription(e.target.value)}} />
+                onChange={(e)=>{setDescription(e.target.value)}} />
                 </div>
 
                 <button type="submit"> Book Storage </button>
             </form>
-
-
         </div>
         </>
      );

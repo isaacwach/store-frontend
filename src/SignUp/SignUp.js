@@ -29,20 +29,20 @@ const SignUp = () => {
                 <Form.Control type="password" placeholder="Confirm Password" />
               </Form.Group>
               <p className="forgot-password text-right">
-                Forgot <a href="#">password?</a>
+                Forgot <a href="/signup">password?</a>
               </p>
               <button className='myGrey' type="submit">
               Sign Up
               </button>
               <div>
                 <p className="forgot-password text-right">
-                Already have an account <a href="/Login">login?</a>
+                Already have an account <a href="/login">login?</a>
                 </p>
               </div>
             </Form>
           </Col>
           <Col lg={8} md={6} sm={12}>
-            <img className='w-100' height="700px" src='/images/signup.svg'/>
+            <img className='w-100' height="700px" alt='signuplogo' src='/images/signup.svg'/>
           </Col>
         </Row>
 

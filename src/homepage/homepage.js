@@ -35,9 +35,6 @@ const Home = (props) => {
                 <h2>Book a safe storage on a button click</h2>
                 <div className='buttons'>
 
-                    <button className="btn btn-warning">Personal Booking</button>
-                    <button className="btn btn-secondary">Business Booking</button>
-
                     <Link to='/booking' className="btn btn-warning">Personal Booking</Link>
                     <Link to='/booking' className="btn btn-secondary">Business Booking</Link>
                     <Popup>
