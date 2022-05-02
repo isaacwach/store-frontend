@@ -6,13 +6,14 @@ import App from './App';
 // import "./App.css";
 
 import "./homepage/home.css";
+import "./navbar/navbar.css";
+import "./Login/Login.css";
+import "./SignUp/SignUp.css";
 import "./footer/footer.css"
-import "./navbar/navbar.css"
 import "./popup/popup.css"
 import "./details/details.css"
 
 import "./transport/transport.css";
-// import "./components/Login.css";
 
 
 

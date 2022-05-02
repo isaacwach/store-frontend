@@ -1,19 +1,35 @@
 import React from 'react';
-import Home from './homepage/homepage'
-import Footer from './footer/footer'
-import NavbarHead from './navbar/navbar'
-import Details from './details/details'
+
+import SignUp from './SignUp/SignUp';
+import Login from './Login/Login.js';
+
 import "./App.css"
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import Booking from "./booking/booking.js";
-import Admin from "./admin/admin.js";
-import GetBookings from './requests/request';
 import Login from './components/login.component';
 import SignUp from './components/signup.component';
 
 
 const App= () => {
+    return (  
+      <Router>
+            <div className='content'>
+                <Switch>
+                    <Route path="/login">
+                        <Login/>
+                    </Route>
+                    <Route path="/signup">
+                        <SignUp/>
+                    </Route>
+                </Switch>
+            </div>
+      </Router>
+
+    );
+
+}; 
+
+
+export default App ;
     return (    
       <>
     
@@ -73,7 +89,7 @@ const App= () => {
 
     )
 
-} 
+
 
 
 export default App ;
