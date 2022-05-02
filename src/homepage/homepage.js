@@ -1,5 +1,6 @@
 import React from 'react';
 import Popup from '../popup/popup';
+import { Link } from 'react-router-dom';
 
 const Card = (props) => {
     return (
@@ -32,8 +33,8 @@ const Home = () => {
                 <h1>Welcome to Classic Store</h1>
                 <h2>Book a safe storage on a button click</h2>
                 <div className='buttons'>
-                    <button className="btn btn-warning">Personal Booking</button>
-                    <button className="btn btn-secondary">Business Booking</button>
+                    <Link to='/booking' className="btn btn-warning">Personal Booking</Link>
+                    <Link to='/booking' className="btn btn-secondary">Business Booking</Link>
                     <Popup>
                         <p>Fill in Details</p>
                         <form>
