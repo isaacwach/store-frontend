@@ -1,54 +1,71 @@
 import {useState} from "react";
 import React from "react";
-import {Button} from "react-bootstrap";
 
 const BookingForm = () => {
-    const [start, setStart]=useState('')
-    const [end, setEnd]=useState('')
-    const [unit, setUnit]=useState('3399')
+    const [start_date, setStartDate]=useState()
+    const [exit_date, setExitDate]=useState()
+    // const [unit, setUnit]=useState('3399')
     // const [pickup, setPickup]=useState('')
-    const [goods, setGoods]=useState('')
+    const [type_of_goods, setTypeOfGoods]=useState('')
     const [description, setDescription]=useState('')
 
+    const API_URL = 'https://store58.herokuapp.com/api/booking/'
 
+    const handleSubmit= (e) => {
+        e.preventDefault();
+        const booking= {type_of_goods, start_date, exit_date, description };
+        fetch(`${API_URL}`, {
+            method: 'POST',
+            mode:'no-cors',
+            headers: {"Content-Type": "application/json", 'Authorization': '8db2657061036484a4ec19b23b13b82e47d8f874'},
+            body: JSON.stringify(booking)
+        }).then( ()=> {
+            console.log('New booking made!');
+            console.log(JSON.stringify(booking))
+        })
+    }
     return ( 
         <>
 
         <div className="Booking-Form">
 
-            <form>
+            <form onSubmit={handleSubmit} >
                 <h4>Booking form</h4>
                 <div className="form-group">
                 <label> Start Date * </label>
                 <input className="form-control"
                 type="date"
                 required
-                value={start}
-                onchange={(e)=>{setStart(e.target.value)}} />
+                value={start_date}
+                onChange={(e)=>{setStartDate(e.target.value)}} />
                 </div>
+
+
                 <div className="form-group">
                 <label> Exit Date * </label>
                 <input  className="form-control"
                 type="date"
                 required
-                value={end}
-                onchange={(e)=>{setEnd(e.target.value)}} />
+                value={exit_date}
+                onChange={(e)=>{setExitDate(e.target.value)}} />
                 </div>
-                <div className="form-group">
+                {/* <div className="form-group">
                 <label> Storage unit* </label>
                 <input  className="form-control"
                 type="text"
                 required
                 value={unit}
                 onchange={(e)=>{setUnit(e.target.value)}} />
-                </div>
+                </div> */}
+
+
                 <div className="form-group">
                 <label> Type of goods: * </label>
                 <input  className="form-control"
                 type="text"
                 required
-                value={goods}
-                onchange={(e)=>{setGoods(e.target.value)}} />
+                value={type_of_goods}
+                onChange={(e)=>{setTypeOfGoods(e.target.value)}} />
                 </div>
                
                <div className="form-group">
@@ -60,7 +77,7 @@ const BookingForm = () => {
                 onchange={(e)=>{setDescription(e.target.value)}} />
                 </div>
 
-                <Button> Book Storage </Button>
+                <button type="submit"> Book Storage </button>
             </form>
 
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import Popup from '../popup/popup';
+import { Link } from 'react-router-dom';
+
 
 const Card = (props) => {
     return (
@@ -23,17 +25,21 @@ const Card = (props) => {
     )
 }
 
-const Home = () => {
+const Home = (props) => {
     return (
         <>
-        <div className="container-fluid Hero">
-            <div className="row">
+        <div className="container-fluid hero">
+            <div className="row flex-column-reverse flex-sm-row">
                 <div className="intro col-md-6"> 
                 <h1>Welcome to Classic Store</h1>
                 <h2>Book a safe storage on a button click</h2>
                 <div className='buttons'>
+
                     <button className="btn btn-warning">Personal Booking</button>
                     <button className="btn btn-secondary">Business Booking</button>
+
+                    <Link to='/booking' className="btn btn-warning">Personal Booking</Link>
+                    <Link to='/booking' className="btn btn-secondary">Business Booking</Link>
                     <Popup>
                         <p>Fill in Details</p>
                         <form>
@@ -43,6 +49,7 @@ const Home = () => {
                         </form>
                        
                     </Popup>
+
                 </div>
                 </div>
                 <div className="col-md-6"> 
@@ -70,16 +77,16 @@ const Home = () => {
             <hr className="line2"size="10" width="220px" color="orange"></hr> 
             <h3>What our Esteemed Clients are Saying</h3>
             <div className="row test-cards">
-                <div className="col-md-3">
+                <div className="col-md-auto col-xs-6">
                     <Card src={'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-auto col-xs-6">
                     <Card src={'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet amet sur jitr opium"}/>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-auto">
                     <Card src={'https://freerangestock.com/sample/116474/man-avatar-.jpg'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr"}/>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-auto">
                     <Card src={'https://i.pinimg.com/474x/57/70/ab/5770ab4f9edf4b18bbf7f420c94c1488.jpg'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet"}/>
                 </div>
             </div>
