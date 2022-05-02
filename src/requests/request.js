@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
+// import StorageCard from '../booking/storage';
 
 
 const API_URL = 'https://store58.herokuapp.com/api/booking/'
@@ -11,10 +12,12 @@ const GetBookings = () => {
         const response= await fetch(`${API_URL}`,
      {
         method:'GET',
-        headers:{'Content-Type': 'application/json'}})
+        headers:{'Content-Type': 'application/json'
+    }})
         const data = await response.json();
         setBookings(data)
         console.log(data)
+        console.log(bookings)
     }
     useEffect( () => {
         getBookings()

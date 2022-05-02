@@ -1,17 +1,18 @@
 import React from "react";
 import {useState} from 'react';
 
+
 const TransportForm = () => {
     
     const [destination, setDestination]= useState('')
-    const [delivery_fee, setDeliveryFee] = useState(300)
+    // const [delivery_fee, setDeliveryFee] = useState(300)
     const [client_name, setClientName] = useState('')
     // const [destination_address, setDestinationAddress] = useState('')
     const [description, setDescription] = useState('')
     const [phone_no, setPhoneNo] = useState('')
 
     return (  
-        <div client_name="Transport">
+        <div className="Booking-Form">
             <form>
                 <h3>Enter transport details</h3>
                 <div className="form-group">
@@ -51,6 +52,10 @@ const TransportForm = () => {
                     onChange={ (e) => {setDescription(e.target.value)}}
                     />
                 </div>
+                {/* <h4
+                // onChange={ (e) => {setDeliveryFee(e.target.value)}}
+                
+                > Transport fee: {delivery_fee} </h4> */}
 
                 <button className="btn"> Add transport </button>
             </form>
