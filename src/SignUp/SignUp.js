@@ -1,9 +1,10 @@
 import React from 'react';
-import {Button, Col, Container, Row, Form } from "react-bootstrap";
+import {Col, Container, Row, Form } from "react-bootstrap";
 
 const SignUp = () => {
   return(
     <>
+    <div classname="body">
       <Container className='container'>
         <Row>
           <Col lg={4} md={6} sm={12}>
@@ -13,6 +14,7 @@ const SignUp = () => {
                 <Form.Label>Username</Form.Label>
                 <Form.Control type="text" placeholder="Enter Username" />
               </Form.Group>
+                
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -45,6 +47,8 @@ const SignUp = () => {
         </Row>
 
       </Container>
+
+      </div>
     </>
   )
 }

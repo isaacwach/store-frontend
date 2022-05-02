@@ -4,6 +4,7 @@ import {Button, Col, Container, Row,  Form} from "react-bootstrap";
 const Login = () => {
   return(
     <>
+    <div className='body'>
       <Container>
         <br></br>
         <Row>
@@ -13,6 +14,8 @@ const Login = () => {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Username</Form.Label>
                 <Form.Control type="email" placeholder="username" />
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -30,7 +33,7 @@ const Login = () => {
               </button>
               <div>
                 <p className="forgot-password text-right">
-                Dont have an account? <a href="/SignUp">Sign Up</a>
+                Dont have an account? <a href="/signup">Sign Up</a>
                 </p>
               </div>
             </Form>
@@ -41,6 +44,7 @@ const Login = () => {
         </Row>
 
       </Container>
+      </div>
     </>
   )
 }
