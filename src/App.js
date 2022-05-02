@@ -4,7 +4,6 @@ import { Container, Navbar,Nav } from 'react-bootstrap';
 import './App.css';
 import SignUp from './SignUp/SignUp';
 import Login from './Login/Login.js';
-import StorageDetails from './StorageDetails/StorageDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -36,9 +35,6 @@ const App= () => {
                     </Route>
                     <Route path="/signup">
                         <SignUp/>
-                    </Route>
-                    <Route path="/storagedetails">
-                        <StorageDetails/>
                     </Route>
                 </Switch>
             </div>
