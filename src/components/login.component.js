@@ -1,7 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import "./Login.css";
 export default class Login extends Component {
   render() {
     return (
+      <body className="auth">
+      <div className="auth-wrapper">
+         <div className="auth-inner">
       <form>
         <h3>Sign In</h3>
         <div className="mb-3">
@@ -38,9 +42,12 @@ export default class Login extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
+          Forgot <a href="/signup">password?</a>
         </p>
       </form>
+      </div>
+      </div>
+      </body>
     )
   }
 }
