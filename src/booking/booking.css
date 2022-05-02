@@ -7,8 +7,8 @@
     background-image: url(/bookinghero.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center;
-    background: rgba(86, 84, 84, 0.8);
+    background-position: center center;
+    /* background: rgba(86, 84, 84, 0.8); */
 
     
     /* opacity: 0.5; */

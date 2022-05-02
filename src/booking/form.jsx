@@ -7,16 +7,17 @@ const BookingForm = () => {
     // const [unit, setUnit]=useState('3399')
     // const [pickup, setPickup]=useState('')
     const [type_of_goods, setTypeOfGoods]=useState('')
-    // const [description, setDescription]=useState('')
+    const [description, setDescription]=useState('')
 
     const API_URL = 'https://store58.herokuapp.com/api/booking/'
 
     const handleSubmit= (e) => {
         e.preventDefault();
-        const booking= {type_of_goods, start_date, exit_date};
+        const booking= {type_of_goods, start_date, exit_date, description };
         fetch(`${API_URL}`, {
             method: 'POST',
-            headers: {"Content-Type": "application/json"},
+            mode:'no-cors',
+            headers: {"Content-Type": "application/json", 'Authorization': '8db2657061036484a4ec19b23b13b82e47d8f874'},
             body: JSON.stringify(booking)
         }).then( ()=> {
             console.log('New booking made!');
@@ -67,14 +68,14 @@ const BookingForm = () => {
                 onChange={(e)=>{setTypeOfGoods(e.target.value)}} />
                 </div>
                
-               {/* <div className="form-group">
+               <div className="form-group">
                 <label> Description * </label>
                 <textarea className="form-control"
                 type="text"
                 required
                 value={description}
                 onchange={(e)=>{setDescription(e.target.value)}} />
-                </div> */}
+                </div>
 
                 <button type="submit"> Book Storage </button>
             </form>
