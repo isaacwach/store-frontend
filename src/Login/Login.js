@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Col, Container, Row,  Form} from "react-bootstrap";
+import {Col, Container, Row,  Form} from "react-bootstrap";
 
 const Login = () => {
   return(
@@ -26,7 +26,7 @@ const Login = () => {
                 <Form.Check type="checkbox" label="Remember Me" />
               </Form.Group>
               <p className="forgot-password text-right">
-                Forgot <a href="#">password?</a>
+                Forgot <a href="/signup">password?</a>
               </p>
               <button className="myGrey" type="submit">
                 Login
@@ -39,10 +39,9 @@ const Login = () => {
             </Form>
           </Col>
           <Col lg={8} md={6} sm={12}>
-            <img className='w-100' height="700px" src='images/signup.svg'/>
+            <img className='w-100' height="700px" alt="loginimage" src='images/signup.svg'/>
           </Col>
         </Row>
-
       </Container>
       </div>
     </>
