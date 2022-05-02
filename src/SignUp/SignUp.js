@@ -1,0 +1,53 @@
+import React from 'react';
+import {Button, Col, Container, Row, Form } from "react-bootstrap";
+
+const SignUp = () => {
+  return(
+    <>
+      <Container className='container'>
+        <Row>
+          <Col lg={4} md={6} sm={12}>
+            <img src='/images/profile.png' alt='profileicon'/>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>First Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter First Name" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Last Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter Last Name" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+              </Form.Group>
+              <p className="forgot-password text-right">
+                Forgot <a href="#">password?</a>
+              </p>
+              <button className='myGrey' type="submit">
+              Sign Up
+              </button>
+              <div>
+                <p className="forgot-password text-right">
+                Already have an account <a href="/Login">login?</a>
+                </p>
+              </div>
+            </Form>
+          </Col>
+          <Col lg={8} md={6} sm={12}>
+            <img className='w-100' height="700px" src='/images/signup.svg'/>
+          </Col>
+        </Row>
+
+      </Container>
+    </>
+  )
+}
+
+
+export default SignUp ;
