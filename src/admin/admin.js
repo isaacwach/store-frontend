@@ -2,12 +2,12 @@ import React from 'react';
 
 const Admin = () => {
     return ( 
-        <>
+        
 
-        <h1>Bravo</h1>
+        <h1>WELCOME TO ADMIN PAGE</h1>
 
 
-        </>
+       
      );
 }
  
