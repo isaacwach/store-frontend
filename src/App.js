@@ -4,13 +4,13 @@ import Home from './homepage/homepage.js';
 import Admin from './admin/admin.js';
 import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
-import SignUp from './SignUp/ClientSignup';
+import ClientSignup from './SignUp/ClientSignup.js';
 import Login from './Login/Login.js';
 import Footer from './footer/footer.js'
 import Details from './details/details.js';
 
 import "./App.css"
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -41,9 +41,7 @@ const App= () => {
 <Route path='/login'>
   <Login />
 </Route>
-<Route path='/signup'>
-  <SignUp />
-</Route>
+<Route exact path="/client/signup" component={ClientSignup}/>
 
 </Switch>
 </Router>

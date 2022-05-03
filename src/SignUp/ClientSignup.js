@@ -14,37 +14,37 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
   })
 
   const handleChange=(e)=>setClient({
-    ...client,
-    [e.target.name]:e.target.value })
-    
-const {username, email, password, password2}=client
- 
-const handleSubmit=(e)=>{
-   e.preventDefault();
-   const newClient={
-       username,
-       email,
-       password,
-       password2
-   }
-   console.log(newClient)
+      ...client,
+      [e.target.name]:e.target.value })
+      
+  const {username, email, password, password2}=client
    
-create_clientuser(newClient)
-}
-if(isAuthenticated && isClient){
-    return <Redirect to="/client/dashboard"/>
-}
+ const handleSubmit=(e)=>{
+     e.preventDefault();
+     const newClient={
+         username,
+         email,
+         password,
+         password2
+     }
+     console.log(newClient)
+  create_clientuser(newClient)
+ }
+  if(isAuthenticated && isClient){
+      return <Redirect to="/client/dashboard"/>
+  }
 
 
   return(
     <>
     <div classname="body">
+      <h2>Sign Up as Client</h2>
       <Container className='container'>
         <Row>
           <Col lg={4} md={6} sm={12}>
             <img src='/images/profile.png' alt='profileicon'/>
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form onSubmit={ e =>handleSubmit(e)}>
+              <Form.Group  className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Username</Form.Label>
                 <input type='text'
                                  className='form-control' 

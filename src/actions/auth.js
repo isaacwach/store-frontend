@@ -2,6 +2,7 @@ import axios from "axios";
 import {
     CLIENT_USER_LOADED,
     CLIENT_USER_FAILED,
+    LOGOUT_SUCCESS,
     REGISTER_CUSER_SUCCESS,
     REGISTER_CUSER_FAILED
 } from "../actions/types"
@@ -20,7 +21,7 @@ export const getClientUser=()=>(dispatch, getState)=>{
     if(token && is_client){
         config.headers['Authorization']=`Token ${token}`  
     }
-    axios.get('http://127.0.0.1:8000/api/client/dashboard/', config)
+    axios.get('https://store58.herokuapp.com/api/signup/client/', config)
     .then(res =>{
         dispatch({
             type:CLIENT_USER_LOADED,
@@ -33,6 +34,9 @@ export const getClientUser=()=>(dispatch, getState)=>{
     })
 }
 
+
+
+     
         
 
 export const create_clientuser=({username, email,password, password2})=>(dispatch)=>{
@@ -43,7 +47,7 @@ export const create_clientuser=({username, email,password, password2})=>(dispatc
     }
     const body=JSON.stringify({username, email, password, password2})
 
-    axios.post('http://127.0.0.1:8000/api/signup/client/', body, config)
+    axios.post('https://store58.herokuapp.com/api/client/dashboard/', body, config)
     .then(res =>{
         dispatch({
             type:REGISTER_CUSER_SUCCESS,
@@ -61,7 +65,23 @@ export const create_clientuser=({username, email,password, password2})=>(dispatc
 }
 
 
+export const logout=()=>(dispatch, getState)=>{
+    const token=getState().auth.token
+    const config={
+        headers:{
+            'Content-Type':'application/json'
+        }
+    }
 
-
-
-
+    if(token){
+        config.headers['Authorization']= `Token ${token}`
+    }
+    axios.post('https://store58.herokuapp.com/rest-auth/logout/', null, config)
+    .then(res =>{
+        dispatch({
+            type:LOGOUT_SUCCESS
+        })
+    }).catch(err =>{
+        console.log(err.response.data)
+    })
+}
