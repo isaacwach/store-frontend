@@ -5,8 +5,6 @@ import Login from './Login/Login.js';
 
 import "./App.css"
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './components/login.component';
-import SignUp from './components/signup.component';
 
 
 const App= () => {
