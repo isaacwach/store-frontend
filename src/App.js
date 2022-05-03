@@ -5,7 +5,8 @@ import Admin from './admin/admin.js';
 import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import SignUp from './SignUp/SignUp';
-import Login from './Login/Login.js';
+// import LoginAdmin from './Login/Login.js';
+import LoginAdmin from './LoginAdmin/LoginAdmin.js';
 import Footer from './footer/footer.js'
 import Details from './details/details.js';
 import AdminSignup from './components/AdminSignup';
@@ -39,7 +40,7 @@ const App= () => {
   <GetBookings />
 </Route>
 <Route path='/login'>
-  <Login />
+  <LoginAdmin />
 </Route>
 <Route path='/signup'>
   <SignUp />

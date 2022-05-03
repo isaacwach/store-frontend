@@ -10,7 +10,8 @@ import App from './App';
 
 import "./homepage/home.css";
 import "./navbar/navbar.css";
-import "./Login/Login.css";
+import "./LoginAdmin/Login.css";
+
 import "./SignUp/SignUp.css";
 import "./footer/footer.css"
 import "./popup/popup.css"
