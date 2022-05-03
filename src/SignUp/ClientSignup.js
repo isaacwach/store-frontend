@@ -28,6 +28,7 @@ const handleSubmit=(e)=>{
        password2
    }
    console.log(newClient)
+   
 create_clientuser(newClient)
 }
 if(isAuthenticated && isClient){
