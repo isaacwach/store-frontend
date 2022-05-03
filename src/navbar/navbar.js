@@ -10,7 +10,7 @@ const NavbarHead = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
 
-                    <Nav.Link className="details" href="#home">Details</Nav.Link>
+                    <Nav.Link className="details" href="/details">Details</Nav.Link>
                     <Nav.Link className="home" href="/">Home</Nav.Link>
                     <a href="/signup"> <button className="btn3">Signup</button></a>
                     <a href="/login"><button className="btn4">Login</button></a>
