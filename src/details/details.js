@@ -62,6 +62,9 @@ class Storage extends React.Component {
             )
           })}
         </div>
+        <div>
+          <p>You have not stored with us</p>
+        </div>
       </div>
         </>
     )
@@ -91,6 +94,7 @@ const Pop = (props) =>{
                   <button className="btn-btn2" onClick={() => props.setTrigger(false)} >Close</button>
               </div>
           </form>
+
       </div>
                        
     </Popup>

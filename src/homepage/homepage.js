@@ -1,6 +1,7 @@
 import React from 'react';
-import Popup from '../popup/popup';
 import { Link } from 'react-router-dom';
+
+import ReactStars from "react-rating-stars-component";
 
 
 const Card = (props) => {
@@ -29,31 +30,15 @@ const Home = (props) => {
     return (
         <>
         <div className="container-fluid hero">
-            <div className="row flex-column-reverse flex-sm-row">
-                <div className="intro col-md-6"> 
                 <h1>Welcome to Classic Store</h1>
-                <h2>Book a safe storage on a button click</h2>
+                <h2>Book safe storage at a button's click</h2>
                 <div className='buttons'>
 
                     <Link to='/booking' className="btn btn-warning">Personal Booking</Link>
                     <Link to='/booking' className="btn btn-secondary">Business Booking</Link>
-                    <Popup>
-                        <p>Fill in Details</p>
-                        <form>
-                        <label>Enter your name:
-                            <input type="text" />
-                        </label>
-                        </form>
-                       
-                    </Popup>
 
                 </div>
-                </div>
-                <div className="col-md-6"> 
-                    <img className="shelves" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcxwj0yCkum1HJtNkWX2_cmndrrVoP_z0pg&usqp=CAU" alt=""></img>
-                </div>
-
-            </div>
+                
         </div>
         <div className="container-fluid about">
             <div className="row">
@@ -81,10 +66,10 @@ const Home = (props) => {
                     <Card src={'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet amet sur jitr opium"}/>
                 </div>
                 <div className="col-md-auto">
-                    <Card src={'https://freerangestock.com/sample/116474/man-avatar-.jpg'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr"}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdzwVTM2Qz3A7SqUsdzLsUBfjtz4y5xgAyZw&usqp=CAU'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr"}/>
                 </div>
                 <div className="col-md-auto">
-                    <Card src={'https://i.pinimg.com/474x/57/70/ab/5770ab4f9edf4b18bbf7f420c94c1488.jpg'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet"}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7QgUlHndF8E8D_Fcm6wiqVcIACH9DG2GekA&usqp=CAU'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet"}/>
                 </div>
             </div>
 

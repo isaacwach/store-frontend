@@ -1,10 +1,30 @@
 import React from 'react';
-// import bookinghero from './bookinghero.jpeg'
-import BookingForm from './form';
-import TransportForm from '../transport/transport';
-import StorageCard from './storage'
+import {useState, useEffect} from 'react';
+import StorageCard from './StorageCard'
+
+const API_URL = 'https://store58.herokuapp.com/api/storage/unit'
+
 
 const Booking = () => {
+    const [storages, setStorages]= useState([])
+    const getStorages= async () => {
+        const response= await fetch(`${API_URL}`,
+     {
+        method:'GET',
+        headers:{'Content-Type': 'application/json'
+
+    }})
+        const data = await response.json();
+
+        setStorages(data)
+        console.log(storages)
+    }
+    useEffect( () => {
+        getStorages()
+    }, []);
+
+
+    
 
     return ( 
         <>
@@ -18,11 +38,22 @@ const Booking = () => {
                 <h4>Book now!!</h4>
               
             </div>
+            <div className="container">
+                    <h1 className="text-center" > Our Storage Solutions</h1>
+
+                        <div className="container">
+                            
+                        {storages.map((storage) =>(
+                            <StorageCard prop={storage} />
+                        ))}
+                       
+                        </div>
+
+            </div>
     
-                <BookingForm />
-                <TransportForm />
-                < StorageCard />
         </div>
+
+    
 
         </>
      );

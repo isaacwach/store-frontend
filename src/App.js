@@ -6,8 +6,8 @@ import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import SignUp from './SignUp/SignUp';
 import Login from './Login/Login.js';
-import Footer from './footer/footer.js'
-import Details from './details/details.js';
+import Footer from './footer/footer.js';
+import Storage from './details/details.js';
 
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -20,16 +20,20 @@ const App= () => {
 <NavbarHead />
 <Router>
   <Switch>
+
     <Route exact path='/'>
 <Home />
-<Route path='details' >
-<Details />
-</Route>
-</Route>
+    </Route>
+
+<Route path='/details' >
+<Storage />
+</Route>  
+
 <Route path='/booking'>
 
 <Booking />
 </ Route>
+    
 <Route path='/admin'>
   <Admin />
   </Route>
