@@ -45,9 +45,9 @@ class Storage extends React.Component {
         <>
                 <div className="container">
         <div id="list-wrapper">
-          {tasks.map(function(task, index){
+          {tasks.map(function(task, user_id){
             return(
-              <div key={index} className="task-wrapper flex-wrapper">
+              <div key={user_id} className="task-wrapper flex-wrapper">
                 <Card style={{ width: '28rem' }} className="detail-card">
                   <Card.Body>
                     <Card.Title className='card-title'>Storage Details</Card.Title>
@@ -89,6 +89,11 @@ const Pop = (props) =>{
               <label>Expected move our date:<br/>
                   <input id='date' type="date" />
               </label>
+              <p>Do want want your goods delivered?</p>
+              <div className='radio'>
+                <input type="radio" value="Male" name="gender" /> Yes
+                <input type="radio" value="Female" name="gender" /> No
+              </div>
               <div className="form-buttons"> 
                   <button className="btn-btn1">Submit</button>
                   <button className="btn-btn2" onClick={() => props.setTrigger(false)} >Close</button>

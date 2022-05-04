@@ -7,8 +7,11 @@ const BookingForm = () => {
     const [exit_date, setExitDate]=useState()
     const [client_name, setClientName]=useState()
     const [price, setPrice]=useState()
+    // eslint-disable-next-line
     const [storage, setStorage]= useState('Drama')
+    // eslint-disable-next-line
     const [transport, setTransport]= useState('sieva')
+    // eslint-disable-next-line
     const [client, setClent] = useState('felo')
     const [types_of_goods, setTypeOfGoods]=useState('')
     const [description, setDescription]=useState('')
