@@ -31,7 +31,7 @@ const Home = (props) => {
         <>
         <div className="container-fluid hero">
                 <h1>Welcome to Classic Store</h1>
-                <h2>Book a safe storage on a button click</h2>
+                <h2>Book safe storage at a button's click</h2>
                 <div className='buttons'>
 
                     <Link to='/booking' className="btn btn-warning">Personal Booking</Link>

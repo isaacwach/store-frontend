@@ -94,6 +94,7 @@ const Pop = (props) =>{
                   <button className="btn-btn2" onClick={() => props.setTrigger(false)} >Close</button>
               </div>
           </form>
+
       </div>
                        
     </Popup>
