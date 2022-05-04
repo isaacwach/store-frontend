@@ -1,10 +1,10 @@
 .booking-hero{
 
     font-family: 'Courier New', Courier, monospace;
-    color:white;
+    color:grey;
     margin:0;
     padding:2rem, 0;
-    background-image: url(/bookinghero.jpeg);
+    /* background-image: url(/bookinghero.jpg); */
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
@@ -61,6 +61,66 @@ top: 110px; */
     color: #fff;
     border: 0;
     padding: 8px;
+    margin-top: 8px;
     border-radius: 8px;
     cursor: pointer;
+  }
+
+
+  .modal{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    text-align:center;
+    /* background-color:grey; */
+    /* width:50rem; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 50rem;
+    /* background-color:rgb(212, 204, 204); */
+    border:2px solid blue;
+    box-shadow: 5px 5px 5px 10px grey;
+
+  }
+
+  .modal-header, .modal-footer {
+    padding: 10px;
+    color:rgb(255, 149, 0);
+    text-align: center;
+
+  }
+
+  .modal-title{
+    text-align: center;
+  }
+
+  .modal-body {
+    padding:10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  .modal button {
+    background:rgb(255, 149, 0);
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 8px;
+    margin:5px;
+    cursor: pointer;
+  }
+
+  .modal h3 {
+    text-align: center;
+  }
+
+  #kichwangumu {
+    text-align: center;
   }

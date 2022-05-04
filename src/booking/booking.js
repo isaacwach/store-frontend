@@ -1,8 +1,5 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-// import bookinghero from './bookinghero.jpeg'
-import BookingForm from './form';
-import TransportForm from '../transport/transport';
 import StorageCard from './StorageCard'
 
 const API_URL = 'https://store58.herokuapp.com/api/storage/unit'
@@ -10,7 +7,6 @@ const API_URL = 'https://store58.herokuapp.com/api/storage/unit'
 
 const Booking = () => {
     const [storages, setStorages]= useState([])
-
     const getStorages= async () => {
         const response= await fetch(`${API_URL}`,
      {
@@ -45,8 +41,6 @@ const Booking = () => {
             <div className="container">
                     <h1 className="text-center" > Our Storage Solutions</h1>
 
-                    {/* { storages?.length > 0 ? ( */}
-                    
                         <div className="container">
                             
                         {storages.map((storage) =>(
@@ -55,12 +49,6 @@ const Booking = () => {
                        
                         </div>
 
-                 </div>
-            <div>
-                <BookingForm />
-            </div>
-            <div>
-                <TransportForm />
             </div>
     
         </div>
