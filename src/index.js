@@ -23,6 +23,7 @@ import "./transport/transport.css";
 
 import './booking/booking.css';
 import './admin/admin.css';
+import './components/RegisterButton.css'
 
 const root= ReactDom.createRoot(document.getElementById('root'));
 root.render(
