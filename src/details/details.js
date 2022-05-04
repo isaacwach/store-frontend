@@ -62,6 +62,9 @@ class Storage extends React.Component {
             )
           })}
         </div>
+        <div>
+          <p>You have not stored with us</p>
+        </div>
       </div>
         </>
     )

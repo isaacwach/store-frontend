@@ -23,18 +23,17 @@ const App= () => {
 
     <Route exact path='/'>
 <Home />
-</Route>
-
+    </Route>
 
 <Route path='/details' >
 <Storage />
-
 </Route>  
 
 <Route path='/booking'>
 
 <Booking />
 </ Route>
+    
 <Route path='/admin'>
   <Admin />
   </Route>
