@@ -12,6 +12,8 @@ import Details from './details/details.js';
 import AdminSignup from './components/AdminSignup';
 import RegisterButton from './components/RegisterButton.js';
 // import AdminSignup from './AdminSignup/AdminSignup';
+import { APrivateRoute } from './private/PrivateRoute.js';
+import { CPrivateRoute } from './private/PrivateRoute.js';
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -50,6 +52,13 @@ const App= () => {
 </Route>
 <Route path='/register/button'>
   <RegisterButton />
+</Route>
+<Route path ='/admin'>
+  <APrivateRoute />
+
+</Route>
+<Route path='/' >
+<CPrivateRoute />
 </Route>
 </Switch>  
 </Router>

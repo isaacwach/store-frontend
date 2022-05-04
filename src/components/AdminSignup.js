@@ -31,35 +31,35 @@ const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
     create_adminuser(newAdmin)
    }
     if(isAuthenticated && isAdmin){
-        return <Redirect to="/"/>
+        return <Redirect to="/admin" />
     }
     return (
-        <div classname="body">
+        <div className="body">
       <Container className='container'>
         <Row>
           <Col lg={4} md={6} sm={12}>
             <img src='/images/profile.png' alt='profileicon'/>
             <Form onSubmit={ e =>handleSubmit(e)}>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" controlId="username">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter Username" value={username}
+                <Form.Control type="text" placeholder="Enter Username" name='username' value={username}
                                  onChange={(e)=>handleChange(e)} />
               </Form.Group>
                 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" controlId="email">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email"  value={email}
+                <Form.Control type="email" placeholder="Enter email" name='email'  value={email}
                                  onChange={(e)=>handleChange(e)} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" value={password}
+                <Form.Control type="password" placeholder="Password" name='password' value={password}
                                  onChange={(e)=>handleChange(e)}/>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" controlId="confirmpassword">
                 <Form.Label>Confirm Password </Form.Label>
-                <Form.Control type="password" placeholder="Confirm Password" value={password2}
+                <Form.Control type="password" placeholder="Confirm Password" name='password2' value={password2}
                                  onChange={(e)=>handleChange(e)}/>
               </Form.Group>
               <p className="forgot-password text-right">
@@ -87,7 +87,7 @@ const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
 }
 
 AdminSignup.propTypes={
-    create_admintuser:PropTypes.func.isRequired,
+    create_adminuser:PropTypes.func.isRequired,
     isAuthenticated:PropTypes.bool,
     isAdmin:PropTypes.bool
 }

@@ -42,32 +42,32 @@ export const getAdminUser=()=>(dispatch, getState)=>{
 
 
 
-      // check token and load freelance user
-    //   export const getFreelanceUser = ()=>(dispatch, getState)=>{
-    //     const token=getState().auth.token;
-    //     const is_client=getState().auth.isClient
-    //     const config={
-    //         headers:{
-    //             'Content-Type':'application/json'
-    //         }
-    //     }
+    //   check token and load client user
+      export const getClientUser = ()=>(dispatch, getState)=>{
+        const token=getState().auth.token;
+        const is_client=getState().auth.isClient
+        const config={
+            headers:{
+                'Content-Type':'application/json'
+            }
+        }
 
-    //     if(token && !is_client){
-    //         config.headers['Authorization']=`Token ${token}`
-    //     }
+        if(token && !is_client){
+            config.headers['Authorization']=`Token ${token}`
+        }
 
-    //     axios.get('http://127.0.0.1:8000/api/freelance/dashboard/', config)
-    //       .then(res =>{
-    //           dispatch({
-    //               type:FREELANCE_USER_LOADED,
-    //               payload:res.data
-    //           })
-    //       }).catch(err => {
-    //           dispatch({
-    //               type:FREELANCE_USER_FAILED
-    //           })
-    //       })
-    // }
+        axios.get('https://store58.herokuapp.com/api/client/dashboard/', config)
+          .then(res =>{
+              dispatch({
+                  type:CLIENT_USER_LOADED,
+                  payload:res.data
+              })
+          }).catch(err => {
+              dispatch({
+                  type:CLIENT_USER_FAILED
+              })
+          })
+    }
         
 
 export const create_adminuser=({username, email,password, password2})=>(dispatch)=>{
@@ -96,30 +96,30 @@ export const create_adminuser=({username, email,password, password2})=>(dispatch
 }
 
 
-// export const create_freelanceuser=({username, email,password, password2})=>(dispatch)=>{
-//     const config={
-//         headers:{
-//             'Content-Type':'application/json'
-//         }
-//     }
-//     const body=JSON.stringify({username, email, password, password2})
+export const create_clientuser=({username, email,password, password2})=>(dispatch)=>{
+    const config={
+        headers:{
+            'Content-Type':'application/json'
+        }
+    }
+    const body=JSON.stringify({username, email, password, password2})
 
-//     axios.post('http://127.0.0.1:8000/api/signup/freelance/', body, config)
-//     .then(res =>{
-//         dispatch({
-//             type:REGISTER_FUSER_SUCCESS,
-//             payload:res.data
-//         })
-//         console.log(res.data)
-//     }).catch(err =>{
-//         dispatch({
-//             type:REGISTER_FUSER_FAILED
-//         })
-//         console.log(err.response.data)
-//     })
+    axios.post('https://store58.herokuapp.com/api/signup/client/', body, config)
+    .then(res =>{
+        dispatch({
+            type:REGISTER_CUSER_SUCCESS,
+            payload:res.data
+        })
+        console.log(res.data)
+    }).catch(err =>{
+        dispatch({
+            type:REGISTER_CUSER_FAILED
+        })
+        console.log(err.response.data)
+    })
 
     
-// }
+}
 
 
 export const login=({username, password})=>(dispatch)=>{

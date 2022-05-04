@@ -20,7 +20,7 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
   };
 
   if (isAuthenticated && isAdmin) {
-    return <Redirect to="/" />;
+    return <Redirect to="/admin" />;
   } else if (isAuthenticated && !isAdmin) {
     return <Redirect to="/" />;
   } else {
@@ -36,7 +36,7 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Username</Form.Label>
                     <Form.Control
-                      type="email"
+                      type="text"
                       placeholder="username"
                       onChange={(e) => loginChange(e)}
                       name="username"

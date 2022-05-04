@@ -1,21 +1,15 @@
-// import {
-//     CLIENT_USER_LOADED,
-//     CLIENT_USER_FAILED,  
-//     ADMIN_USER_LOADED,
-//     ADMIN_USER_FAILED,
-//     LOGIN_SUCCESS,
-//     LOGIN_FAILED, 
-//     LOGOUT_SUCCESS,
-//     REGISTER_CUSER_SUCCESS,
-//     REGISTER_AUSER_FAILED,
-//     REGISTER_AUSER_SUCCESS,
-//     REGISTER_CUSER_FAILED } from "../actions/types"
-
-// import { CLIENT_USER_FAILED } from "../actions/types"  
+  
 import { REGISTER_AUSER_FAILED } from "../actions/types" 
 import { REGISTER_AUSER_SUCCESS } from "../actions/types" 
 import { REGISTER_CUSER_SUCCESS } from "../actions/types"
 import { REGISTER_CUSER_FAILED } from "../actions/types"
+import { CLIENT_USER_FAILED } from "../actions/types"
+import { CLIENT_USER_LOADED } from "../actions/types"
+import { LOGIN_FAILED } from "../actions/types"
+import { LOGIN_SUCCESS } from "../actions/types"
+import { LOGOUT_SUCCESS } from "../actions/types"
+import { ADMIN_USER_FAILED } from "../actions/types"
+import { ADMIN_USER_LOADED } from "../actions/types"
 
     const initialState={
         token:localStorage.getItem('token'),
@@ -38,21 +32,21 @@ import { REGISTER_CUSER_FAILED } from "../actions/types"
                     isClient:action.payload.user.is_client,
                     isLoading:false
                 }
-            // case CLIENT_USER_LOADED:
-            //     return{
-            //         ...state,
-            //         isAuthenticated:true,
-            //         isClient:true,
-            //         user:action.payload
-            //     }
-                // case FREELANCE_USER_LOADED:
-                //     return {
-                //         ...state,
-                //         isAuthenticated:true,
-                //         isLoading:false,
-                //         isClient:false,
-                //         user:action.payload
-                //     }
+             case ADMIN_USER_LOADED:
+                return{
+                    ...state,
+                    isAuthenticated:true,
+                    isAdmin:true,
+                     user:action.payload
+                }
+                case CLIENT_USER_LOADED:
+                    return {
+                        ...state,
+                        isAuthenticated:true,
+                        isLoading:false,
+                        isClient:false,
+                        user:action.payload
+                    }
     
             case LOGIN_SUCCESS:
                 localStorage.setItem('token', action.payload.token)
@@ -77,17 +71,17 @@ import { REGISTER_CUSER_FAILED } from "../actions/types"
                     isLoading:false
                 }
     
-                // case CLIENT_USER_FAILED:
-                // case FREELANCE_USER_FAILED:
-                // case LOGOUT_SUCCESS:
-                //     localStorage.removeItem('token')
-                //     return {
-                //         ...state,
-                //         token:null,
-                //         isClient:null,
-                //         isAuthenticated:false,
-                //         isLoading:false,
-                //     }
+                case ADMIN_USER_FAILED:
+                case CLIENT_USER_FAILED:
+                case LOGOUT_SUCCESS:
+                     localStorage.removeItem('token')
+                     return {
+                        ...state,
+                        token:null,
+                         isClient:null,
+                        isAuthenticated:false,
+                         isLoading:false,
+                     }
 
                 default:
         }
