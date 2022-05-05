@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import ReactStars from "react-rating-stars-component";
+// import ReactStars from "react-rating-stars-component";
 
 
 const Card = (props) => {
@@ -30,6 +30,7 @@ const Home = (props) => {
     return (
         <>
         <div className="container-fluid hero">
+           <div className="hero2">
                 <h1>Welcome to Classic Store</h1>
                 <h2>Book safe storage at a button's click</h2>
                 <div className='buttons'>
@@ -38,6 +39,7 @@ const Home = (props) => {
                     <Link to='/booking' className="btn btn-secondary">Business Booking</Link>
 
                 </div>
+           </div>
                 
         </div>
         <div className="container-fluid about">
@@ -59,17 +61,17 @@ const Home = (props) => {
             <hr className="line2"size="10" width="220px" color="orange"></hr> 
             <h3>What our Esteemed Clients are Saying</h3>
             <div className="row test-cards">
-                <div className="col-md-auto col-xs-6">
-                    <Card src={'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
+                <div className="col-md-3 col-xs-6">
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc5IoLCd1lK4qcN3c1yLp5PSNqH8eWkVMgQ&usqp=CAU'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
                 </div>
-                <div className="col-md-auto col-xs-6">
-                    <Card src={'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet amet sur jitr opium"}/>
+                <div className="col-md-3 col-xs-6">
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0y7QXKa_TXgj-MfT9cgoSMgVYmJom8rgk2Q&usqp=CAU'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet amet sur jitr opium"}/>
                 </div>
-                <div className="col-md-auto">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdzwVTM2Qz3A7SqUsdzLsUBfjtz4y5xgAyZw&usqp=CAU'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr"}/>
+                <div className="col-md-3">
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHLa4XhpI8VvjML0INdf5BhorGuJT-hP73w&usqp=CAU'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr"}/>
                 </div>
-                <div className="col-md-auto">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7QgUlHndF8E8D_Fcm6wiqVcIACH9DG2GekA&usqp=CAU'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet"}/>
+                <div className="col-md-3">
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYqft8X-xxN5wBA6XI3y_-zuD69qNPTB9KcA&usqp=CAU'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet"}/>
                 </div>
             </div>
 

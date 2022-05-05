@@ -4,16 +4,18 @@
 }
 
 .hero{
-    background-image: url(https://c8.alamy.com/comp/2F9M8M4/rear-view-of-delivery-man-holding-push-cart-loaded-with-cardboard-boxes-on-white-background-copy-space-available-2F9M8M4.jpg);
+    /* background-image: url(/hero.png); */
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     padding: 350px 0 100px 0;
-    background-position: 220px 0;
 }
+
 
 .hero h1{
     font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
 }
 .hero h2{
     color: orange;
