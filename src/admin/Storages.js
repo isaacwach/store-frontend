@@ -1,11 +1,13 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
-import StorageCard from './StorageCard';
-
-const API_URL = 'https://store58.herokuapp.com/api/storage/unit/'
+import { useState,useEffect } from 'react';
+import AdminStorageCard from './AdminStorageCard';
 
 
-const Booking = () => {
+
+
+
+const StorageUnits = () => {
+    const API_URL = 'https://store58.herokuapp.com/api/storage/unit'
     const [storages, setStorages]= useState([])
     const getStorages= async () => {
         const response= await fetch(`${API_URL}`,
@@ -28,32 +30,26 @@ const Booking = () => {
 
     return ( 
         <>
-        <div className="booking" >
-            <div className="spacing">
-
-            </div>
+        <div className="storage" >
     
-            <div className="booking-hero text-center" >
+            {/* <div className="booking-hero text-center" >
 
-                <h1> Welcome to our online store </h1>
+                <h2> Welcome to our online store </h2>
                 <h3>Book your slot according to the goods you intend to store. </h3>
                 <h3>The safety of your goods is guaranteed</h3>
                 <h4>Book now!!</h4>
               
-            </div>
-            <div className="storage-header">
-                    <h1 className="text-center" > Our Storage Solutions</h1>
-                </div>
-     
+            </div> */}
             <div className="container">
-                <div className="row">
-              
-                        <StorageCard storages={storages} />
+                    <h1 className="text-center" > All  storages</h1>
 
-               </div>
-
-            </div>
-            <div className="spacing2">
+                        <div className="container">
+                            
+                        {storages.map((storage) =>(
+                            <AdminStorageCard prop={storage} />
+                        ))}
+                       
+                        </div>
 
             </div>
     
@@ -65,4 +61,4 @@ const Booking = () => {
      );
 }
  
-export default Booking;
+export default StorageUnits;

@@ -25,13 +25,19 @@ const App= () => {
 <NavbarHead />
 <Router>
   <Switch>
+
     <Route exact path='/'>
 <Home />
-<Route path='details' >
-<Details />
+    </Route>
+
+<Route path='/details' >
+<Storage />
+</Route> 
+<Route path='/booking/order'>
+  <Order />
 </Route>
-</Route>
-<Route path='/booking'>
+
+<Route exact path='/booking'>
 
 <Booking />
 </ Route>
