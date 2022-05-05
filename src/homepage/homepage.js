@@ -35,7 +35,7 @@ const Home = (props) => {
                 <h2>Book safe storage at a button's click</h2>
                 <div className='buttons'>
 
-                    <Link to='/booking' className="btn btn-warning">Personal Booking</Link>
+                    <Link to='/booking' className="btn btn-warning personal">Personal Booking</Link>
                     <Link to='/booking' className="btn btn-secondary">Business Booking</Link>
 
                 </div>
@@ -62,16 +62,16 @@ const Home = (props) => {
             <h3>What our Esteemed Clients are Saying</h3>
             <div className="row test-cards">
                 <div className="col-md-3 col-xs-6">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc5IoLCd1lK4qcN3c1yLp5PSNqH8eWkVMgQ&usqp=CAU'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc5IoLCd1lK4qcN3c1yLp5PSNqH8eWkVMgQ&usqp=CAU'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
                 </div>
                 <div className="col-md-3 col-xs-6">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0y7QXKa_TXgj-MfT9cgoSMgVYmJom8rgk2Q&usqp=CAU'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet amet sur jitr opium"}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0y7QXKa_TXgj-MfT9cgoSMgVYmJom8rgk2Q&usqp=CAU'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet amet sur jitr opium"}/>
                 </div>
                 <div className="col-md-3">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHLa4XhpI8VvjML0INdf5BhorGuJT-hP73w&usqp=CAU'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr"}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHLa4XhpI8VvjML0INdf5BhorGuJT-hP73w&usqp=CAU'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty"}/>
                 </div>
                 <div className="col-md-3">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYqft8X-xxN5wBA6XI3y_-zuD69qNPTB9KcA&usqp=CAU'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet"}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYqft8X-xxN5wBA6XI3y_-zuD69qNPTB9KcA&usqp=CAU'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty"}/>
                 </div>
             </div>
 

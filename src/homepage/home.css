@@ -18,7 +18,7 @@
     margin-bottom: 10px;
 }
 .hero h2{
-    color: orange;
+    color: white;
     font-size: 50px;
 }
 .buttons{
@@ -32,6 +32,10 @@
     font-size: 18px;
     margin-left: 20px;
     border-radius: 35px;
+    border: 1px solid orange;
+}
+.personal{
+    background-color: orange;
 }
 
 /* about section */
@@ -41,14 +45,15 @@
     height: 870px;
 }
 .box{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 85%;
     padding-top: 70px;
+    padding-left: 140px;
     border-top-right-radius: 57%;
     border-bottom-right-radius: 50%;
 }
 .description{
-    padding-top: 220px;
+    padding-top: 180px;
     padding-right: 120px;
 }
 .description h1{
@@ -56,6 +61,7 @@
 }
 .description p{
     font-size: 22px;
+    text-align: center;
 }
 .line1{
     border-radius: 30px;
@@ -67,9 +73,9 @@
     width: 350px;
 }
 .card-img-top{
-    height: 250px;
+    height: 170px;
     border-radius: 100%;
-    width: 270px;
+    width: 170px;
     
 }
 .mycard{
