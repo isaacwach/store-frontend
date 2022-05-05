@@ -8,28 +8,47 @@ const NavbarHead = () => {
     const dispatch=useDispatch()
 const authLink=(
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li className='nav-item mr-2'>
-                 <button onClick={()=>dispatch(logout())} className='nav-link btn btn-danger'>Logout</button>
-            </li>
-        </ul>
- )
-const publicLink=(
         <Navbar bg="light" expand="lg">
         <Container>
         <Navbar.Brand className="logo" href="#home">Classic Store</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-
-                <Nav.Link className="details" href="#home">Details</Nav.Link>
-                <Nav.Link className="home" href="/">Home</Nav.Link>
-                <a href="/register/button"> <button className="btn3">Signup</button></a>
-                <a href="/login"><button className="btn4">Login</button></a>
                 
+            <li><Nav.Link className="details" href="#home">Details</Nav.Link></li>
+            <li> <Nav.Link className="home" href="/">Home</Nav.Link></li>
+            <li>  <a href="/register/button"> <button className="btn3">Signup</button></a></li>
+            <li> <a href="/login"><button className="btn4">Login</button></a></li>   
             </Nav>
         </Navbar.Collapse>
         </Container>
     </Navbar>
+            
+            <li className='nav-item mr-2'>
+                 <button onClick={()=>dispatch(logout())} className='nav-link btn btn-danger'>Logout</button>
+            </li>
+        </ul>
+ )
+const publicLink=(
+    <ul>
+        <Navbar bg="light" expand="lg">
+        <Container>
+
+        <Navbar.Brand className="logo" href="#home">Classic Store</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+                
+            <li><Nav.Link className="details" href="#home">Details</Nav.Link></li>
+            <li> <Nav.Link className="home" href="/">Home</Nav.Link></li>
+            <li>  <a href="/register/button"> <button className="btn3">Signup</button></a></li>
+            <li> <a href="/login"><button className="btn4">Login</button></a></li>   
+            </Nav>
+        </Navbar.Collapse>
+        </Container>
+    </Navbar>
+    </ul>
+       
     )
 return (
         <Fragment>
