@@ -18,7 +18,7 @@ const BookingForm = () => {
 
     const API_URL = 'https://store58.herokuapp.com/api/booking/'
 
-    const [isPending, setPending]= useState(true)
+    const [isPending, setPending]= useState(false)
 
     const handleSubmit= (e) => {
         e.preventDefault();
@@ -31,7 +31,8 @@ const BookingForm = () => {
             .then( ()=> {
             console.log('New booking made!');
             console.log(JSON.stringify(booking))
-            setPending(false)
+            setPending(true)
+            // setPending(false)
         })
     }
     return ( 
@@ -109,8 +110,9 @@ const BookingForm = () => {
                 onChange={(e)=>{setDescription(e.target.value)}} />
                 </div>
 
-                {isPending && <button type="submit"> Book Storage </button>}
-                {!isPending && <button> Booking ....</button>}
+                {!isPending && <button type="submit"> Book Storage </button>}
+                {isPending && <button> Booked</button>}
+                {/* {isPending && <button>Complete!</button>} */}
             </form>
         </div>
         </>
