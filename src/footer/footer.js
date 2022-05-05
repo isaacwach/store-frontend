@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaFacebook, FaInstagram, FaTwitter} from 'react-icons/fa';
+// import {FaFacebook, FaInstagram, FaTwitter} from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -11,7 +11,7 @@ const Footer = () => {
                     <h5>Get the safest and</h5>
                     <h5>Most reliable storage</h5>
                     <div className="social-icons">
-                    <FaFacebook/> <FaInstagram/> <FaTwitter/>
+                    {/* <FaFacebook/> <FaInstagram/> <FaTwitter/> */}
                     </div>
                 </div>
                 <div className="col-md-2">

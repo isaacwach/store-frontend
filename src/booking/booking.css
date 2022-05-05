@@ -2,8 +2,8 @@
 
     font-family: 'Courier New', Courier, monospace;
     color:grey;
-    margin:0;
-    padding:2rem, 0;
+    /* margin-top:5rem; */
+    padding:4.2rem;
     /* background-image: url(/bookinghero.jpg); */
     background-repeat: no-repeat;
     background-size: 100%;
@@ -11,7 +11,6 @@
     /* background: rgba(86, 84, 84, 0.8); */
 
     
-    /* opacity: 0.5; */
 }
 
 .booking-hero h2 {
@@ -22,17 +21,6 @@ Button {
     border-radius: 12px;
 }
 
-/* Rectangle 6 */
-
-/* position: absolute;
-width: 1836px;
-height: 482px;
-left: -2px;
-top: 110px; */
-
-
-
-/* Booking form styles */
 
 .Booking-Form {
     max-width: 400px;
@@ -124,3 +112,26 @@ top: 110px; */
   #kichwangumu {
     text-align: center;
   }
+
+
+  .storage {
+  /* margin: 0.3rem; */
+
+  /* position: relative; */
+  padding: 15px;
+  /* border-radius: 12px; */
+  overflow: hidden;
+  border: none;
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+
+.storage:hover {
+  /* box-shadow: 0px 15px 18px 8px rgba(0, 0, 0, 0.1); */
+  transform: scale(1.10, 1.10);
+}
+.storage-header {
+  margin:2rem, 0;
+}
+
