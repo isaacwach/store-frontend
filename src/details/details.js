@@ -43,9 +43,10 @@ class Storage extends React.Component {
     var tasks = this.state.todoList
     return(
         <>
-                <div className="container">
+                <div className="container detail-cards">
         <div id="list-wrapper">
           {tasks.map(function(task, user_id){
+            
             return(
               <div key={user_id} className="task-wrapper flex-wrapper">
                 <Card style={{ width: '28rem' }} className="detail-card">
@@ -61,9 +62,6 @@ class Storage extends React.Component {
               </div>
             )
           })}
-        </div>
-        <div>
-          <p>You have not stored with us</p>
         </div>
       </div>
         </>
