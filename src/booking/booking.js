@@ -38,14 +38,20 @@ const Booking = () => {
                 <h4>Book now!!</h4>
               
             </div>
-            <div className="container">
+            <div className="storage-header">
                     <h1 className="text-center" > Our Storage Solutions</h1>
-
-                        <div className="container">
+                </div>
+            
+            <div className="container  ">
+              
+                        <div className="row">
+                           
                             
                         {storages.map((storage) =>(
                             <StorageCard prop={storage} />
                         ))}
+
+            
                        
                         </div>
 

@@ -18,8 +18,8 @@ const Modal= props => {
     const [bravo, setBravo]=useState(false)
 
     return(
-        <div className='modal'>
-            <div className="modal-content">
+        <div className='modal' onClick={props.onClose} >
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <div className="modal-header">
                     <h3 id='kichwangumu' >Book this storage unit</h3>
                 </div>
@@ -30,8 +30,8 @@ const Modal= props => {
                 <div classname="modal-footer">
                     <h4>Would you like transport with this order?</h4>
 
-                <button onClick={()=>setBravo(true)} >Yes</button>
-                <button onClick={props.onClose} >No</button>
+                <button onClick={()=>setBravo(true)} > Yes </button>
+                <button onClick={props.onClose} > No </button>
                 </div>
             </div>
         </div>
@@ -43,12 +43,14 @@ const Modal= props => {
 const StorageCard = ({prop}) => {
     const [show, setShow]=useState(false)
     return (
-        <div className="storage">
+        <div className="storage col-md-4">
+            
+
                 <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>Unit: {prop.id}</Card.Title>
                         <Card.Text>
-                        <p>Size: {prop.size} m^2</p>
+                        <p>Size: {prop.size} m²</p>
                         <p>Price: {prop.price}</p>
                         <p>Category: {prop.categories}</p>
                         <p>Status: {prop.status}</p>
@@ -60,7 +62,9 @@ const StorageCard = ({prop}) => {
                         </div>                   
                     </Card.Body>
                 </Card>
-            </div>
+                </div>
+
+    
       );
 }
  
