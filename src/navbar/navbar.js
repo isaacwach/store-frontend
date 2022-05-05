@@ -1,9 +1,11 @@
-import React,{Fragment} from 'react';
+import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import {useSelector, useDispatch} from "react-redux"
+import { useDispatch} from "react-redux"
 import {logout} from "../actions/auth"
 
 const NavbarHead = () => {
+    // const state=useSelector(state => state.auth)
+    const dispatch=useDispatch()
     return (
         <Navbar bg="light" expand="lg" className="navbar">
             <Container>
@@ -12,12 +14,11 @@ const NavbarHead = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-
-
                     <Nav.Link className="home" href="/">Home</Nav.Link>
                     <Nav.Link className="details" href="/details">Details</Nav.Link>
-                    <a href="/signup"> <button className="btn3">Signup</button></a>
+                    <a href="//register/button"> <button className="btn3">Signup</button></a>
                     <a href="/login"><button className="btn4">Login</button></a>
+                    <a href='/'><button onClick={()=>dispatch(logout())} className='btn4'>Logout</button></a>
                 </Nav>
             </Navbar.Collapse>
             </Container>

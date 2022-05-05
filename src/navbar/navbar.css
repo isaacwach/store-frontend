@@ -1,13 +1,14 @@
 .me-auto {
     text-align: right;
     margin-left: auto;
+   
 }
 .btn3{
     width: 130px;
     height: 40px;
     background-color: orange;
     border-radius: 35px;
-    margin-left: 100px;
+    margin-left: 150px;
     font-size: 22px;
 }
 .btn4{
@@ -20,19 +21,20 @@
     color: white;
 }
 .home{
-    margin-left: 580px;
+    /* margin-left: 250px; */
     font-size: 24px;
     font-weight: bold;
 }
 .details{
-    margin-left: 90px;
+    margin-left: 120px;
     font-size: 24px;
     font-weight: bold;
 }
 .logo{
-    margin-right: auto;
+    
     font-size: 24px;
     font-weight: bold;
+    
 }
 .navbar{
     position: fixed;
@@ -41,8 +43,9 @@
 }
 .navbar img{
     width: 50px;
-    margin-left: -120px;
+    margin-left: -10px;
 }
 .logo-span{
     color: orange;
 }
+
