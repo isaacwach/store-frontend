@@ -119,8 +119,13 @@ Button {
   padding: 15px;
   overflow: hidden;
   border: none;
+  text-align: center;
 
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+.storage Card {
+  display:flex;
+  justify-content: flex-end;
 }
 
 
@@ -131,3 +136,7 @@ Button {
   padding:20px, 10px;
 }
 
+
+.spacing{
+  padding-top:10rem;
+}

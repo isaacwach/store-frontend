@@ -1,8 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-import StorageCard from './StorageCard'
+import StorageCard from './StorageCard';
 
-const API_URL = 'https://store58.herokuapp.com/api/storage/unit'
+const API_URL = 'https://store58.herokuapp.com/api/storage/unit/'
 
 
 const Booking = () => {
@@ -29,6 +29,9 @@ const Booking = () => {
     return ( 
         <>
         <div className="booking" >
+            <div className="spacing">
+                
+            </div>
     
             <div className="booking-hero text-center" >
 
@@ -41,23 +44,13 @@ const Booking = () => {
             <div className="storage-header">
                     <h1 className="text-center" > Our Storage Solutions</h1>
                 </div>
-                <div className="container" >
-                
-                </div>
-
-            
-            <div className="container  ">
+     
+            <div className="container">
+                <div className="row">
               
-                        <div className="row">
-                           
-                            
-                        {storages.map((storage) =>(
-                            <StorageCard prop={storage} />
-                        ))}
+                        <StorageCard storages={storages} />
 
-            
-                       
-                        </div>
+               </div>
 
             </div>
     
