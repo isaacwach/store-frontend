@@ -32,3 +32,10 @@
     background-image: linear-gradient(to right, red , yellow);
     color: rgb(7, 7, 7);
 }
+.radio input {
+    font-size: 20px;
+}
+.form1 p{
+    font-size: 20px;
+    font-weight: normal;
+}
