@@ -16,7 +16,7 @@ const NavbarHead = () => {
                 <Nav className="me-auto">
                     <Nav.Link className="home" href="/">Home</Nav.Link>
                     <Nav.Link className="details" href="/details">Details</Nav.Link>
-                    <a href="//register/button"> <button className="btn3 btn-warning">Signup</button></a>
+                    <a href="/register/button"> <button className="btn3 btn-warning">Signup</button></a>
                     <a href="/login"><button className="btn4 btn-warning">Login</button></a>
                     <a href='/'><button onClick={()=>dispatch(logout())} className='btn4 btn-warning'>Logout</button></a>
                 </Nav>
