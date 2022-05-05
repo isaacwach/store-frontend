@@ -43,7 +43,8 @@ const Modal= props => {
 const StorageCard = ({prop}) => {
     const [show, setShow]=useState(false)
     return (
-        <div className="storage col-md-4">
+        <>
+        <div className="storage col-md-4 justify-content-center">
             
 
                 <Card style={{ width: '18rem' }}>
@@ -63,6 +64,9 @@ const StorageCard = ({prop}) => {
                     </Card.Body>
                 </Card>
                 </div>
+              
+
+                </>
 
     
       );
