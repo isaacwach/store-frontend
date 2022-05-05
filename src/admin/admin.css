@@ -1,22 +1,26 @@
-h1{
+.welcome{
     text-align: center;
     color: #FDAA53;
     padding-top: 50px;
 }
-h2{
+#create{
     text-align: center;
     padding-top: 40px;
 }
-.storageForm{
+.storageForm1{
     text-align: center;
     background-color:grey ;
+   
 }
-.form-group{
+.storageForm1 label{
+    padding-top: 10px;
+}
+.storageForm1 .form-group{
     margin-left: 450px;
     width: 350px;
     text-align: center;
 }
-button{
+.storageForm1 button{
 margin-top: 30px;
 margin-bottom: 30px;
 background-color:#FDAA53 ;

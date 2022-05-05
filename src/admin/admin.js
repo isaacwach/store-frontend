@@ -1,30 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import StorageUnits from './Storages';
+
 
 
 
 const Admin = () => {
-    const API_URL = 'https://store58.herokuapp.com/api/storage/unit'
+    const API_URL = 'https://store58.herokuapp.com/api/storage/unit/'
     const [description, setDescription]=useState('')
     const [size,setSize]=useState('')
     const [price,setPrice]=useState('')
     const [status,setStatus]=useState('')
     const [categories,setCategories]=useState('')
-
-
-
-
-
-
-
-
-
-
-    
-
     const handleSubmit= (e) => {
             e.preventDefault();
-            const storage= {description,size,status,categories};
+            const storage= {description,size,price,status,categories};
 
             fetch(`${API_URL}`, {
                 method: 'POST',
@@ -39,9 +29,9 @@ const Admin = () => {
     return ( 
         <>
         <div>
-            <h1>
+            <div className="welcome">
                 WELCOME TO ADMIN PAGE
-            </h1>
+            </div>
             {/* <div className="col-md-6"> 
 
                     <img className="shelves" src="images/images/admin-office-binder-wooden-desk-table-colored-pencil-pencils-pen-notebook-paper-79046621.jpg" alt=""></img>
@@ -52,9 +42,9 @@ const Admin = () => {
 
 
 
-        <div className='storageForm'>
+        <div className='storageForm1'>
             <form onSubmit={handleSubmit}>
-                <h2>New Storage</h2>
+                <h2 id="create">Create New Storage</h2>
                 <div className='form-group'>
                     <label>Description</label>
                     <input className='form-control'
@@ -73,7 +63,7 @@ const Admin = () => {
             <div className='form-group'>
                     <label>Size</label>
                     <input className='form-control'
-                    type='text' 
+                    type='number' 
                     required
                     value={size}
                     onChange={
@@ -130,11 +120,19 @@ const Admin = () => {
                     
                     <button type='submit' >Create Storage</button>
             </form>
-        </div>
 
+        </div>
+<div className="units">
+    <StorageUnits/>
+
+</div>
 
         </>
      );
+     
 }
  
 export default Admin;
+
+
+
