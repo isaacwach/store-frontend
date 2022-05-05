@@ -3,7 +3,7 @@
     font-family: 'Courier New', Courier, monospace;
     color:grey;
     /* margin-top:5rem; */
-    padding:4.2rem;
+    /* padding:4.2rem; */
     /* background-image: url(/bookinghero.jpg); */
     background-repeat: no-repeat;
     background-size: 100%;
@@ -13,7 +13,7 @@
     
 }
 
-.booking-hero h2 {
+.booking-hero h1 {
     color:rgb(255, 149, 0);
 }
 
@@ -25,10 +25,10 @@ Button {
 .Booking-Form {
     max-width: 400px;
     margin: 0 auto;
-    text-align: center;
+    /* text-align: center; */
   }
   .Booking-Form label {
-    text-align: left;
+    /* text-align: left; */
     display: block;
   }
   .Booking-Form h2 {
@@ -42,7 +42,7 @@ Button {
     margin: 10px 0;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    display: block;
+    display: absolute;
   }
   .Booking-Form Button {
     background:rgb(255, 149, 0);
@@ -119,15 +119,27 @@ Button {
   padding: 15px;
   overflow: hidden;
   border: none;
+  text-align: center;
 
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+.storage Card {
+  display:flex;
+  justify-content: flex-end;
 }
 
 
 .storage:hover {
   transform: scale(1.10, 1.10);
 }
-.storage-header {
+/* .storage-header {
   padding:20px, 10px;
-}
+} */
 
+
+.spacing{
+  padding-top:9rem;
+}
+.spacing2 {
+  padding:5rem;
+}

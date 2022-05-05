@@ -1,10 +1,11 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .hero{
-    background-image: url(/hero.png);
+    /* background-image: url(/hero.png); */
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
