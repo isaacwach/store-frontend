@@ -30,18 +30,23 @@ const Order = () => {
     <div className="spacing" >
 
     </div>
-        <div>
+        <div className="container">
+        <div className="Row">
+
         <StorageCard storages={storages.filter((storage)=>storage.id===1)} />
         </div>
 
-        <div>
+        <div div className="col-md-6">
             <BookingForm />
+        </div>
         </div>
 
         <div className="order" >
         <TransportForm />
         </div>
+        <div className="spacing2">
 
+        </div>
         </>
 
      );

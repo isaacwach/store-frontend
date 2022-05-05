@@ -30,12 +30,12 @@ const Booking = () => {
         <>
         <div className="booking" >
             <div className="spacing">
-                
+
             </div>
     
             <div className="booking-hero text-center" >
 
-                <h2> Welcome to our online store </h2>
+                <h1> Welcome to our online store </h1>
                 <h3>Book your slot according to the goods you intend to store. </h3>
                 <h3>The safety of your goods is guaranteed</h3>
                 <h4>Book now!!</h4>
@@ -51,6 +51,9 @@ const Booking = () => {
                         <StorageCard storages={storages} />
 
                </div>
+
+            </div>
+            <div className="spacing2">
 
             </div>
     
