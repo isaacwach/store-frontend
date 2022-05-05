@@ -42,7 +42,7 @@ const Admin = () => {
 
 
 
-        <div className='storageForm'>
+        <div className='storageForm1'>
             <form onSubmit={handleSubmit}>
                 <h2 id="create">Create New Storage</h2>
                 <div className='form-group'>
