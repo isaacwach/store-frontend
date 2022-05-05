@@ -1,15 +1,19 @@
-h1{
+.welcome{
     text-align: center;
     color: #FDAA53;
     padding-top: 50px;
 }
-h2{
+#create{
     text-align: center;
     padding-top: 40px;
 }
 .storageForm{
     text-align: center;
     background-color:grey ;
+   
+}
+label{
+    padding-top: 10px;
 }
 .form-group{
     margin-left: 450px;
