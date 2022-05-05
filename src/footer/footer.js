@@ -6,20 +6,20 @@ const Footer = () => {
         <footer>
             <div className="row">
                 <div className="col-md-3">
-                    <img src="" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM9EXUSa_uX8p8GJQ5Si7rIMf4OOPxK5Piag&usqp=CAU" id='logo-f' alt='logo'/>
                     <h3>Classic store</h3>
-                    <p>Get the safest and</p>
-                    <p>Most reliable storage</p>
+                    <h5>Get the safest and</h5>
+                    <h5>Most reliable storage</h5>
                     <div className="social-icons">
                     {/* <FaFacebook/> <FaInstagram/> <FaTwitter/> */}
                     </div>
                 </div>
                 <div className="col-md-2">
                     <h3>Explore</h3>
-                    <a> <p>Home</p> </a>
-                    <a> <p>Details</p> </a>
-                    <a> <p>Signup</p> </a>
-                    <a> Login</a>
+                    <p>Home</p>
+                    <p>Details</p>
+                    <p>Signup</p>
+                    <p>Login</p>
                 </div>
                 <div className="col-md-2">
                     <h3>Visit</h3>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
                 <div className="col-md-2">
                     <h3>Contact Us</h3>
-                    <a>classicstore@info.org.ke</a>
+                    <a href="gmail.com">classicstore@info.org.ke</a>
                     <p>020-9546 5678</p>
                     <p>+254787000000</p>
                 </div>

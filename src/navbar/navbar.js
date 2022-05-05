@@ -5,7 +5,7 @@ const NavbarHead = () => {
     return (
         <Navbar bg="light" expand="lg" className="navbar">
             <Container>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM9EXUSa_uX8p8GJQ5Si7rIMf4OOPxK5Piag&usqp=CAU"></img>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM9EXUSa_uX8p8GJQ5Si7rIMf4OOPxK5Piag&usqp=CAU" alt="logo"></img>&nbsp;&nbsp;
             <Navbar.Brand className="logo" href="#home">Classic <span className="logo-span">Store</span></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
