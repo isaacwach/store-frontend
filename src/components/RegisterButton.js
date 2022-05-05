@@ -3,6 +3,8 @@ import React from 'react'
  
 const RegisterButton = () => {
     return (
+        <>
+        <div className='spacing'></div>
         <div className='signUp'>
                 <h3 className='hero' >WELCOME TO CLASSIC STORE </h3>
                <h3 className='section'>REGISTER WITH US AND GET THE FILL OF OUR SERVICES</h3>
@@ -35,6 +37,7 @@ const RegisterButton = () => {
         
 
         </div>
+        </>
         
         
     )

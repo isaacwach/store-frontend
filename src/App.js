@@ -8,7 +8,7 @@ import SignUp from './SignUp/SignUp';
 // import LoginAdmin from './Login/Login.js';
 import LoginAdmin from './LoginAdmin/LoginAdmin.js';
 import Footer from './footer/footer.js'
-import Details from './details/details.js';
+// import Details from './details/details.js';
 import AdminSignup from './components/AdminSignup';
 import RegisterButton from './components/RegisterButton.js';
 // import AdminSignup from './AdminSignup/AdminSignup';
@@ -16,6 +16,8 @@ import { APrivateRoute } from './private/PrivateRoute.js';
 import { CPrivateRoute } from './private/PrivateRoute.js';
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Storage from './details/details.js';
+
 
 const App= () => {
 
@@ -33,7 +35,7 @@ const App= () => {
 {/* <Route path='/details' >
 <Storage />
 </Route> 
-<Route path='/booking/order'>
+{/* <Route path='/booking/order'>
   <Order />
 </Route> */}
 
