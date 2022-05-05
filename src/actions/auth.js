@@ -130,7 +130,7 @@ export const login=({username, password})=>(dispatch)=>{
     }
     const body=JSON.stringify({username, password})
 
-    axios.post('https://store58.herokuapp.com/rest-auth/login/', body, config)
+    axios.post('https://store58.herokuapp.com/api/login/', body, config)
     .then(response =>{
         dispatch({
             type:LOGIN_SUCCESS,
@@ -156,7 +156,7 @@ export const logout=()=>(dispatch, getState)=>{
     if(token){
         config.headers['Authorization']= `Token ${token}`
     }
-    axios.post('https://store58.herokuapp.com/rest-auth/logout/', null, config)
+    axios.post('https://store58.herokuapp.com/api/logout/', null, config)
     .then(res =>{
         dispatch({
             type:LOGOUT_SUCCESS
