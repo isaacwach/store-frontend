@@ -32,7 +32,7 @@ const App= () => {
 <Home />
     </Route>
 
-<Route path='/details' >
+{/* <Route path='/details' >
 <Storage />
 </Route> 
 {/* <Route path='/booking/order'>

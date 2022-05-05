@@ -10,6 +10,7 @@
     border-radius: 35px;
     margin-left: 150px;
     font-size: 22px;
+    margin-top: 5px;
 }
 .btn4{
     width: 130px;
@@ -19,9 +20,12 @@
     margin-left: 100px;
     font-size: 22px;
     color: white;
+    margin-top: 5px;
 }
 .home{
+
     /* margin-left: 250px; */
+
     font-size: 24px;
     font-weight: bold;
 }
@@ -37,13 +41,15 @@
     
 }
 .navbar{
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 10;
 }
 .navbar img{
     width: 50px;
+
     margin-left: -10px;
+
 }
 .logo-span{
     color: orange;
