@@ -1,5 +1,7 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import {useSelector, useDispatch} from "react-redux"
+import {logout} from "../actions/auth"
 
 const NavbarHead = () => {
     return (

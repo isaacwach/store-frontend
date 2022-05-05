@@ -5,11 +5,15 @@ import Admin from './admin/admin.js';
 import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import SignUp from './SignUp/SignUp';
-import Login from './Login/Login.js';
-import Footer from './footer/footer.js';
-import Storage from './details/details.js';
-import Order from './bookingfiles/order.js';
-
+// import LoginAdmin from './Login/Login.js';
+import LoginAdmin from './LoginAdmin/LoginAdmin.js';
+import Footer from './footer/footer.js'
+import Details from './details/details.js';
+import AdminSignup from './components/AdminSignup';
+import RegisterButton from './components/RegisterButton.js';
+// import AdminSignup from './AdminSignup/AdminSignup';
+import { APrivateRoute } from './private/PrivateRoute.js';
+import { CPrivateRoute } from './private/PrivateRoute.js';
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -37,21 +41,32 @@ const App= () => {
 
 <Booking />
 </ Route>
-    
-<Route path='/admin'>
+<Route exact path='/admin'>
   <Admin />
   </Route>
 <Route path='/sbooking'>
   <GetBookings />
 </Route>
 <Route path='/login'>
-  <Login />
+  <LoginAdmin />
 </Route>
 <Route path='/signup'>
   <SignUp />
 </Route>
+<Route path='/admin/signup'>
+  <AdminSignup /> 
+</Route>
+<Route path='/register/button'>
+  <RegisterButton />
+</Route>
+<Route path ='/admin'>
+  <APrivateRoute />
 
-</Switch>
+</Route>
+<Route path='/' >
+<CPrivateRoute />
+</Route>
+</Switch>  
 </Router>
 <Footer />
 
