@@ -8,7 +8,7 @@ import SignUp from './SignUp/SignUp';
 // import LoginAdmin from './Login/Login.js';
 import LoginAdmin from './LoginAdmin/LoginAdmin.js';
 import Footer from './footer/footer.js'
-import Details from './details/details.js';
+// import Storage from './details/details.js';
 import AdminSignup from './components/AdminSignup';
 import RegisterButton from './components/RegisterButton.js';
 // import AdminSignup from './AdminSignup/AdminSignup';
@@ -32,8 +32,8 @@ const App= () => {
 
 {/* <Route path='/details' >
 <Storage />
-</Route> 
-<Route path='/booking/order'>
+</Route>  */}
+{/* <Route path='/booking/order'>
   <Order />
 </Route> */}
 
