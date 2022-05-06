@@ -21,7 +21,7 @@ export const getClientUser=()=>(dispatch, getState)=>{
     if(token && is_client){
         config.headers['Authorization']=`Token ${token}`  
     }
-    axios.get('https://store58.herokuapp.com/api/signup/client/', config)
+    axios.get('https://store58.herokuapp.com/api/client/dashboard/', config)
     .then(res =>{
         dispatch({
             type:CLIENT_USER_LOADED,
@@ -35,9 +35,7 @@ export const getClientUser=()=>(dispatch, getState)=>{
 }
 
 
-
      
-        
 
 export const create_clientuser=({username, email,password, password2})=>(dispatch)=>{
     const config={
@@ -47,7 +45,7 @@ export const create_clientuser=({username, email,password, password2})=>(dispatc
     }
     const body=JSON.stringify({username, email, password, password2})
 
-    axios.post('https://store58.herokuapp.com/api/client/dashboard/', body, config)
+    axios.post('https://store58.herokuapp.com/api/signup/client/', body, config)
     .then(res =>{
         dispatch({
             type:REGISTER_CUSER_SUCCESS,
@@ -65,6 +63,7 @@ export const create_clientuser=({username, email,password, password2})=>(dispatc
 }
 
 
+
 export const logout=()=>(dispatch, getState)=>{
     const token=getState().auth.token
     const config={
@@ -76,7 +75,7 @@ export const logout=()=>(dispatch, getState)=>{
     if(token){
         config.headers['Authorization']= `Token ${token}`
     }
-    axios.post('https://store58.herokuapp.com/rest-auth/logout/', null, config)
+    axios.post('https://store58.herokuapp.com/rest-auth/logout/?format=api', null, config)
     .then(res =>{
         dispatch({
             type:LOGOUT_SUCCESS
@@ -84,4 +83,6 @@ export const logout=()=>(dispatch, getState)=>{
     }).catch(err =>{
         console.log(err.response.data)
     })
+
+
 }

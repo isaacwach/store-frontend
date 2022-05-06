@@ -31,15 +31,14 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
   create_clientuser(newClient)
  }
   if(isAuthenticated && isClient){
-      return <Redirect to="/client/dashboard"/>
+      return <Redirect to="/"/>
   }
 
 
   return(
     <>
     <div classname="body">
-      <h2>Sign Up as Client</h2>
-      <Container className='container'>
+      <Container className='container'>        
         <Row>
           <Col lg={4} md={6} sm={12}>
             <img src='/images/profile.png' alt='profileicon'/>

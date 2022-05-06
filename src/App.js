@@ -5,12 +5,14 @@ import Admin from './admin/admin.js';
 import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import ClientSignup from './SignUp/ClientSignup.js';
+import RegisterButton from "./components/RegisterButton.js"
 import Login from './Login/Login.js';
 import Footer from './footer/footer.js'
 import Details from './details/details.js';
+import {FPrivateRoute} from "./private/PrivateRoute"
 
 import "./App.css"
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -24,6 +26,9 @@ const App= () => {
   <Switch>
     <Route exact path='/'>
 <Home />
+<Route path="/registerbutton">
+  <RegisterButton/>
+</Route>
 <Route path='details' >
 <Details />
 </Route>
@@ -41,7 +46,15 @@ const App= () => {
 <Route path='/login'>
   <Login />
 </Route>
-<Route exact path="/client/signup" component={ClientSignup}/>
+<Route path="/signup">
+  <ClientSignup/>
+</Route>
+<Route path="/registerbutton">
+  <RegisterButton/>
+</Route>
+<FPrivateRoute path="/" >
+  <Home/>
+</FPrivateRoute>
 
 </Switch>
 </Router>
