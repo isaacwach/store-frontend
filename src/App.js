@@ -35,14 +35,15 @@ const App= () => {
 {/* <Route path='/details' >
 <Storage />
 </Route> 
-{/* <Route path='/booking/order'>
+<Route path='/booking/order/:id'>
   <Order />
-</Route> */}
+</Route> 
 
 <Route exact path='/booking'>
 
 <Booking />
 </ Route>
+
 <Route exact path='/admin'>
   <Admin />
   </Route>
