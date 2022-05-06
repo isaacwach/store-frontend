@@ -29,7 +29,7 @@ const App= () => {
 <Route path='/details' >
 <Storage />
 </Route> 
-<Route path='/booking/order'>
+<Route path='/booking/order/:id'>
   <Order />
 </Route>
 
@@ -38,7 +38,7 @@ const App= () => {
 <Booking />
 </ Route>
     
-<Route path='/admin'>
+<Route exact path='/admin'>
   <Admin />
   </Route>
 <Route path='/sbooking'>
