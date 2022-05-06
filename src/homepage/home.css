@@ -5,7 +5,10 @@
 }
 
 .hero{
-    background-image: url(../images/hero.png);
+    /* background-image: url(/public/hero.png); */
+    background-repeat: no-repeat;
+
+
     background-size: cover;
     text-align: center;
     padding: 350px 0 100px 0;

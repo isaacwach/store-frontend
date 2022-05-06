@@ -1,11 +1,11 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
-import {useState} from 'react';
+// import {useState} from 'react';
 
 
 
 const AdminStorageCard = ({prop}) => {
-    const [show, setShow]=useState(false)
+    // const [show, setShow]=useState(false)
     return (
         <div className="storageCard" key={prop.id}>
                 <Card style={{ width: '18rem' }}>

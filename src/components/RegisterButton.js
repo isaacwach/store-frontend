@@ -3,6 +3,8 @@ import React from 'react'
  
 const RegisterButton = () => {
     return (
+        <>
+        <div className='spacing'></div>
         <div className='signUp'>
                 <h3 className='hero' >WELCOME TO CLASSIC STORE </h3>
                <h3 className='section'>REGISTER WITH US AND GET THE FILL OF OUR SERVICES</h3>
@@ -12,8 +14,8 @@ const RegisterButton = () => {
             <div className="card mycard">
                 <div className="card-body">
                 <img className="card-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcxwj0yCkum1HJtNkWX2_cmndrrVoP_z0pg&usqp=CAU" alt=""></img>
-                    <h5 className="card-title"> <h3>signup as an employer/Admin</h3></h5>
-                    <p className="card-text"><a href="/admin/signup"> <button className="btn3">Signup</button></a></p>
+                    <h5 className="card-title"> <h2>Employer/Admin</h2></h5>
+                    <p className="card-text"><a href="/admin/signup"> <button className="btn5 btn-warning">Signup</button></a></p>
                 </div>
             </div>
                 
@@ -25,8 +27,8 @@ const RegisterButton = () => {
             <div className="card mycard">
                 <div className="card-body">
                 <img className="card-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcxwj0yCkum1HJtNkWX2_cmndrrVoP_z0pg&usqp=CAU" alt=""></img>
-                    <h5 className="card-title"><h3>signup as a Client</h3></h5>
-                    <p className="card-text"><a href="/admin/signup">  <a href="/signup"> <button className="btn3">Signup</button></a></a></p>
+                    <h5 className="card-title"><h2>Client</h2></h5>
+                    <p className="card-text"><a href="/admin/signup">  <a href="/signup"> <button className="btn5 btn-warning">Signup</button></a></a></p>
                 </div>
             </div>
 
@@ -35,6 +37,7 @@ const RegisterButton = () => {
         
 
         </div>
+        </>
         
         
     )
