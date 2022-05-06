@@ -2,6 +2,10 @@ import axios from "axios";
 import {
     CLIENT_USER_LOADED,
     CLIENT_USER_FAILED,
+<<<<<<< HEAD
+    LOGOUT_SUCCESS,
+    REGISTER_CUSER_SUCCESS,
+=======
     ADMIN_USER_LOADED,
     ADMIN_USER_FAILED,
     LOGIN_FAILED,
@@ -10,20 +14,36 @@ import {
     REGISTER_CUSER_SUCCESS,
     REGISTER_AUSER_FAILED,
     REGISTER_AUSER_SUCCESS,
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
     REGISTER_CUSER_FAILED
 } from "../actions/types"
 
 
 
+<<<<<<< HEAD
+export const getClientUser=()=>(dispatch, getState)=>{
+    const token=getState().auth.token
+    const is_client=getState().auth.isClient
+=======
 export const getAdminUser=()=>(dispatch, getState)=>{
     const token=getState().auth.token
     const is_admin=getState().auth.isAdmin
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
     const config={
         headers:{
             'Content-type':'application/json'
         }
     }
 
+<<<<<<< HEAD
+    if(token && is_client){
+        config.headers['Authorization']=`Token ${token}`  
+    }
+    axios.get('https://store58.herokuapp.com/api/client/dashboard/', config)
+    .then(res =>{
+        dispatch({
+            type:CLIENT_USER_LOADED,
+=======
     if(token && is_admin){
         config.headers['Authorization']=`Token ${token}`  
     }
@@ -31,16 +51,24 @@ export const getAdminUser=()=>(dispatch, getState)=>{
     .then(res =>{
         dispatch({
             type:ADMIN_USER_LOADED,
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
             payload:res.data
         })
     }).catch(err =>{
         dispatch({
+<<<<<<< HEAD
+            type:CLIENT_USER_FAILED
+=======
             type:ADMIN_USER_FAILED
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
         })
     })
 }
 
 
+<<<<<<< HEAD
+     
+=======
 
     //   check token and load client user
       export const getClientUser = ()=>(dispatch, getState)=>{
@@ -95,6 +123,7 @@ export const create_adminuser=({username, email,password, password2})=>(dispatch
     
 }
 
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
 
 export const create_clientuser=({username, email,password, password2})=>(dispatch)=>{
     const config={
@@ -122,6 +151,8 @@ export const create_clientuser=({username, email,password, password2})=>(dispatc
 }
 
 
+<<<<<<< HEAD
+=======
 export const login=({username, password})=>(dispatch)=>{
     const config={
         headers:{
@@ -144,6 +175,7 @@ export const login=({username, password})=>(dispatch)=>{
 
 }
 
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
 
 export const logout=()=>(dispatch, getState)=>{
     const token=getState().auth.token
@@ -156,7 +188,11 @@ export const logout=()=>(dispatch, getState)=>{
     if(token){
         config.headers['Authorization']= `Token ${token}`
     }
+<<<<<<< HEAD
+    axios.post('https://store58.herokuapp.com/rest-auth/logout/?format=api', null, config)
+=======
     axios.post('https://store58.herokuapp.com/api/logout/', null, config)
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
     .then(res =>{
         dispatch({
             type:LOGOUT_SUCCESS
@@ -164,4 +200,10 @@ export const logout=()=>(dispatch, getState)=>{
     }).catch(err =>{
         console.log(err.response.data)
     })
+<<<<<<< HEAD
+
+
+}
+=======
 } 
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab

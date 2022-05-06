@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import {
+    CLIENT_USER_LOADED,
+    CLIENT_USER_FAILED,  
+    LOGOUT_SUCCESS, REGISTER_CUSER_SUCCESS,
+    REGISTER_FUSER_FAILED,
+    REGISTER_FUSER_SUCCESS,
+    REGISTER_CUSER_FAILED } from "../actions/types"
+
+=======
   
 import { REGISTER_AUSER_FAILED } from "../actions/types" 
 import { REGISTER_AUSER_SUCCESS } from "../actions/types" 
@@ -10,6 +20,7 @@ import { LOGIN_SUCCESS } from "../actions/types"
 import { LOGOUT_SUCCESS } from "../actions/types"
 import { ADMIN_USER_FAILED } from "../actions/types"
 import { ADMIN_USER_LOADED } from "../actions/types"
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
 
     const initialState={
         token:localStorage.getItem('token'),
@@ -17,6 +28,56 @@ import { ADMIN_USER_LOADED } from "../actions/types"
         isClient:null,
         isLoading:false,
         user:null
+<<<<<<< HEAD
+    }
+
+export const authReducer=(state=initialState, action)=>{
+    switch(action.type){
+        case REGISTER_CUSER_SUCCESS:
+        case REGISTER_FUSER_SUCCESS:
+            localStorage.setItem('token', action.payload.token)
+            return {
+                ...state,
+                ...action.payload,
+                isAuthenticated:true,
+                isClient:action.payload.user.is_client,
+                isLoading:false
+            }
+        case CLIENT_USER_LOADED:
+            return{
+                ...state,
+                isAuthenticated:true,
+                isClient:true,
+                user:action.payload
+            }
+
+
+        case REGISTER_CUSER_FAILED:
+        case REGISTER_FUSER_FAILED:
+            localStorage.removeItem('token')
+            return{
+                ...state,
+                token:null,
+                isClient:null,
+                isAuthenticated:false,
+                isLoading:false
+            }
+
+            case CLIENT_USER_FAILED:
+            case LOGOUT_SUCCESS:
+                localStorage.removeItem('token')
+                return {
+                    ...state,
+                    token:null,
+                    isClient:null,
+                    isAuthenticated:false,
+                    isLoading:false,
+                }
+    default :
+}
+    return state;
+}
+=======
     }     
 
     
@@ -87,3 +148,4 @@ import { ADMIN_USER_LOADED } from "../actions/types"
         }
         return state;
     }     
+>>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
