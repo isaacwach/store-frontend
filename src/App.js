@@ -5,6 +5,7 @@ import Admin from './admin/admin.js';
 import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import SignUp from './SignUp/SignUp';
+import Order from './bookingfiles/order.js';
 // import LoginAdmin from './Login/Login.js';
 import LoginAdmin from './LoginAdmin/LoginAdmin.js';
 import Footer from './footer/footer.js'
@@ -32,7 +33,7 @@ const App= () => {
 <Home />
     </Route>
 
-{/* <Route path='/details' >
+<Route path='/details' >
 <Storage />
 </Route> 
 <Route path='/booking/order/:id'>

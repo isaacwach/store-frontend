@@ -136,14 +136,13 @@ const Order = () => {
             value={description}
             onChange={(e)=>{setDescription(e.target.value)}} />
         </div>
-        {/* <div className="form-group">
-            <label>Transport</label>
-            <input
-            type="text"
-            value={}
-            />
-            </div> */}
-
+        <div>
+            {promptTp && <div> <h3> Would you like transport for this booking?</h3>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false)}> No </button>
+        </div>}
+             
+        </div>
             {!isPending && <button type="submit"> Book Storage </button>}
             {isPending && <button> Booked</button>}
         </form>
@@ -156,7 +155,7 @@ const Order = () => {
 
 
 
-
+{/* 
 
         <div className="container">
         <div className="Row">
@@ -169,11 +168,16 @@ const Order = () => {
             <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false)}> No </button>
         </div>}
              
-        </div>
+        </div> */}
        
+        {/* </div> */}
+        <div className="container" >
+            <div className="row">
+        <div className="col-md-4">
+
+        {transport &&  <TransportForm />}
         </div>
-        {transport &&  <TransportForm />
- }
+        </div>
         </div>
 
         <div className="spacing2">
