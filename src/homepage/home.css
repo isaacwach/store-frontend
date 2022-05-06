@@ -5,7 +5,7 @@
 }
 
 .hero{
-    /* background-image: url(/public/hero.png); */
+    background-image: url(../images/hero.png);
     background-repeat: no-repeat;
 
 
