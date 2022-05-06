@@ -1,37 +1,37 @@
 import React, {useState} from 'react'
 import { connect } from 'react-redux'
 import  PropTypes from "prop-types"
-import { create_clientuser } from '../actions/auth'
+import { create_adminuser } from '../actions/auth'
 import { Redirect } from 'react-router-dom'
 import {Col, Container, Row, Form } from "react-bootstrap";
 
-const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
-    const [client, setClient]=useState({
+const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
+    const [admin, setAdmin]=useState({
         username:'',
         email:'',
         password:'',
         password2:''
     })
 
-    const handleChange=(e)=>setClient({
-        ...client,
+    const handleChange=(e)=>setAdmin({
+        ...admin,
         [e.target.name]:e.target.value })
         
-    const {username, email, password, password2}=client
+    const {username, email, password, password2}=admin
      
    const handleSubmit=(e)=>{
        e.preventDefault();
-       const newClient={
+       const newAdmin={
            username,
            email,
            password,
            password2
        }
-       console.log(newClient)
-    create_clientuser(newClient)
+       console.log(newAdmin)
+    create_adminuser(newAdmin)
    }
-    if(isAuthenticated && isClient){
-        return <Redirect to="/" />
+    if(isAuthenticated && isAdmin){
+        return <Redirect to="/admin" />
     }
     return (
         <div className="body">
@@ -68,7 +68,6 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
               <button className='myGrey' type="submit">
               Sign Up
               </button>
-            
               <div>
                 <p className="forgot-password text-right">
                 Already have an account <a href="/login">login?</a>
@@ -87,16 +86,16 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
     )
 }
 
-ClientSignup.propTypes={
-    create_clientuser:PropTypes.func.isRequired,
+AdminSignup.propTypes={
+    create_adminuser:PropTypes.func.isRequired,
     isAuthenticated:PropTypes.bool,
-    isClient:PropTypes.bool
+    isAdmin:PropTypes.bool
 }
 
 
 const mapStateToProps= state =>({
     isAuthenticated:state.auth.isAuthenticated,
-    isClient:state.auth.isClient
+    isAdmin:state.auth.isAdmin
 })
 
-export default  connect(mapStateToProps, {create_clientuser})(ClientSignup)
+export default  connect(mapStateToProps, {create_adminuser})(AdminSignup)

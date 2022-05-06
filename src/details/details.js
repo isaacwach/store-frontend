@@ -46,7 +46,7 @@ class Storage extends React.Component {
                 <div className="container detail-cards">
         <div id="list-wrapper">
           {tasks.map(function(task, user_id){
-            
+
             return(
               <div key={user_id} className="task-wrapper flex-wrapper">
                 <Card style={{ width: '28rem' }} className="detail-card">
