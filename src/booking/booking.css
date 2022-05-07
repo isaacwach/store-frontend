@@ -32,18 +32,20 @@ Button {
 .Booking-Form {
     max-width: 400px;
     margin: 0 auto;
-    /* text-align: center; */
+    /* display:flex;
+    align-items: left; */
+    position: relative;
   }
   .Booking-Form label {
-    /* text-align: left; */
-    display: block;
+    text-align: left;
+    /* display: block; */
   }
   .Booking-Form h2 {
     font-size: 20px;
     color: #f1356d;
     margin-bottom: 30px;
   }
-  .Booking-Form input, .create textarea, .create select {
+  .Booking-Form input {
     width: 100%;
     padding: 6px 10px;
     margin: 10px 0;
@@ -154,4 +156,9 @@ Button {
 #black {
   color:#000000;
   font-weight:300;
+}
+
+
+.spacing3 {
+ padding-top:4rem;
 }
