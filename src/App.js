@@ -5,8 +5,8 @@ import Admin from './admin/admin.js';
 import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import ClientSignup from './SignUp/ClientSignup.js';
-import RegisterButton from "./components/RegisterButton.js"
-import Login from './Login/Login.js';
+// import RegisterButton from "./components/RegisterButton.js"
+// import Login from './Login/Login.js';
 import Footer from './footer/footer.js'
 import Details from './details/details.js';
 import {FPrivateRoute} from "./private/PrivateRoute"
@@ -15,10 +15,8 @@ import SignUp from './SignUp/SignUp';
 import Order from './bookingfiles/order.js';
 // import LoginAdmin from './Login/Login.js';
 import LoginAdmin from './LoginAdmin/LoginAdmin.js';
-import Footer from './footer/footer.js'
 // import Storage from './details/details.js';
 import AdminSignup from './components/AdminSignup';
-import RegisterButton from './components/RegisterButton.js';
 // import AdminSignup from './AdminSignup/AdminSignup';
 import { APrivateRoute } from './private/PrivateRoute.js';
 import { CPrivateRoute } from './private/PrivateRoute.js';
@@ -41,9 +39,9 @@ const App= () => {
     <Route exact path='/'>
 <Home />
 </Route>
-<Route path="/registerbutton">
+{/* <Route path="/registerbutton">
   <RegisterButton/>
-</Route>
+</Route> */}
 <Route path='/booking'>
     </Route>
 
@@ -71,18 +69,16 @@ const App= () => {
 <Route path="/signup">
   <ClientSignup/>
 </Route>
-<Route path="/registerbutton">
-  <RegisterButton/>
-</Route>
+
 <FPrivateRoute path="/" >
   <Home/>
 </FPrivateRoute>
 <Route path='/admin/signup'>
   <AdminSignup /> 
 </Route>
-<Route path='/register/button'>
+{/* <Route path='/register/button'>
   <RegisterButton />
-</Route>
+</Route> */}
 <Route path ='/admin'>
   <APrivateRoute />
 

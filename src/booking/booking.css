@@ -1,17 +1,14 @@
 .booking-hero{
 
     font-family: 'Courier New', Courier, monospace;
-<<<<<<< HEAD
     color:white;
     margin:0;
     padding:2rem, 0;
     /* background-image: url(/bookinghero.jpeg); */
-=======
     color:grey;
     /* margin-top:5rem; */
     /* padding:4.2rem; */
     /* background-image: url(/bookinghero.jpg); */
->>>>>>> f08084c7313135276dc2a6bf6c4e4c6ca3f6abab
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
