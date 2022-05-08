@@ -24,7 +24,7 @@
 }
 .home{
 
-    /* margin-left: 250px; */
+    margin-left: 275px;
 
     font-size: 24px;
     font-weight: bold;
@@ -41,14 +41,14 @@
     
 }
 .navbar{
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 10;
 }
 .navbar img{
     width: 50px;
 
-    margin-left: -10px;
+    margin-left: -130px;
 
 }
 .logo-span{

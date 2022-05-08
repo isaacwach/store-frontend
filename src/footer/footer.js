@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3 col-sm-5">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM9EXUSa_uX8p8GJQ5Si7rIMf4OOPxK5Piag&usqp=CAU" id='logo-f' alt='logo'/>
                     <h3>Classic store</h3>
                     <h5>Get the safest and</h5>
@@ -14,7 +14,7 @@ const Footer = () => {
                     {/* <FaFacebook/> <FaInstagram/> <FaTwitter/> */}
                     </div>
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 col-sm-5">
                     <h3>Explore</h3>
                     <p>Home</p>
                     <p>Details</p>

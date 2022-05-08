@@ -95,7 +95,7 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
             </Form>
           </Col>
           <Col lg={8} md={6} sm={12}>
-            <img className='w-100' height="700px" alt='signuplogo' src='/images/signup.svg'/>
+            <img className='w-100' height="700px" alt='signuplogo' src='../images/signup.svg'/>
           </Col>
         </Row>
 

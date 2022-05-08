@@ -30,25 +30,38 @@ class Storage extends React.Component {
     console.log("ayzaq")
 
     fetch('https://store58.herokuapp.com/api/storage/unit/')
+    fetch('https://store58.herokuapp.com/api/booking/')
     .then(response => response.json())
     .then(data=> 
       this.setState({
-        todoList: data
+        todoList: data,
+        filterData:[]
       })
     )
     
-  }
-  
+  } 
+
   render(){
     var tasks = this.state.todoList
     return(
         <>
                 <div className="container detail-cards">
         <div id="list-wrapper">
-          {tasks.map(function(task, user_id){
-
+          {tasks.map(function(task, filterData){
+             filterData= () =>{
+              if (task.types_of_goods=='perishables'){
+                var filteredData=this.state.todoList.filter((data) =>{
+                  return tasks
+                })
+                
+              }
+              this.setState({
+                ...this.state,
+                filterData:filteredData
+              })
+            }
             return(
-              <div key={user_id} className="task-wrapper flex-wrapper">
+              <div key={filterData} className="task-wrapper flex-wrapper">
                 <Card style={{ width: '28rem' }} className="detail-card">
                   <Card.Body>
                     <Card.Title className='card-title'>Storage Details</Card.Title>
@@ -56,6 +69,7 @@ class Storage extends React.Component {
                     <Card.Text>Unit category: <span className="card-span">{task.categories}</span></Card.Text>
                     <Card.Text>Unit Price: <span className="card-span">{task.price}</span></Card.Text>                 
                     <Card.Text>Unit description: <span className="card-span">{task.description}</span></Card.Text>
+                    <Card.Text>Exit Date: <span className="card-span">{task.exit_date}</span></Card.Text>
                     <Pop></Pop>
                   </Card.Body>
                 </Card>
