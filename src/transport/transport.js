@@ -1,7 +1,5 @@
 import React from "react";
 import {useState} from 'react';
-import {useParams} from 'react-router-dom';
-import {useEffect} from 'react'
 
 
 const TransportForm = () => {
@@ -35,36 +33,13 @@ const TransportForm = () => {
             // setPending(true)
         })
     }
-    const [iftransport, setifTransport]= useState(false)
-        const [promptTp, setPromptTp]= useState(true)
-
-        const { id }= useParams();
-        const API_URL = `https://store58.herokuapp.com/api/unit/unit-id/${id}`
-
-        const [storages, setStorages]= useState([])
-        const getStorages= async () => {
-            const response= await fetch(`${API_URL}`,
-         {
-            method:'GET',
-            headers:{'Content-Type': 'application/json'
-    
-        }})
-            const data = await response.json();
-    
-            setStorages(data)
-            console.log(storages)
-        }
-
-    useEffect( () => {
-        getStorages()
-    }, []);
 
 
 
     
 
     return (  
-        <div className="Booking-Form  TransportForm">
+        <div className="Booking-Form">
             <form onSubmit={handleSubmit} >
                 <h3>Enter transport details</h3>
                 <div className="form-group">
@@ -131,14 +106,6 @@ const TransportForm = () => {
                     type="text"
                     value={delivery_fee}
                     onChange={ (e) => {setDeliveryFee(e.target.value)}}
-                    />
-                </div>
-
-                <div className="form-group" style={{"display":"none"}} >
-                    <label> Storage id </label>
-                    <input className="form-control"
-                    type="number"
-                    value={storages.id}
                     />
                 </div>
 
