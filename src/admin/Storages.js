@@ -40,7 +40,7 @@ const StorageUnits = () => {
                             <div className="row">
                                 
                         {storages.map((storage) =>(
-                            <AdminStorageCard prop={storage} />
+                            <AdminStorageCard storages={storage} />
                         ))}
                        </div>
                         </div>

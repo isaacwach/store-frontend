@@ -12,6 +12,7 @@ import Footer from './footer/footer.js'
 // import Storage from './details/details.js';
 import AdminSignup from './components/AdminSignup';
 import RegisterButton from './components/RegisterButton.js';
+import DeleteUnits from './admin/AdminDelete.js';
 // import AdminSignup from './AdminSignup/AdminSignup';
 import { APrivateRoute } from './private/PrivateRoute.js';
 import { CPrivateRoute } from './private/PrivateRoute.js';
@@ -63,13 +64,11 @@ const App= () => {
 <Route path='/register/button'>
   <RegisterButton />
 </Route>
-<Route path ='/admin'>
-  <APrivateRoute />
+<Route path ='/admin/delete/:id'>
 
+  <DeleteUnits />
 </Route>
-<Route path='/' >
-<CPrivateRoute />
-</Route>
+
 </Switch>  
 </Router>
 <Footer />
