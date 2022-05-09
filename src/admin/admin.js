@@ -50,15 +50,12 @@ const Admin = () => {
     return ( 
         <>
 
-        <div>
+        <div className="spacing3" >
             
-            <div className="welcome">
-                WELCOME TO ADMIN PAGE
+            <div className="welcome  spacing4 ">
+               <h1> WELCOME TO ADMIN PAGE</h1>
             </div>
-            {/* <div className="col-md-6"> 
-
-                    <img className="shelves" src="images/images/admin-office-binder-wooden-desk-table-colored-pencil-pencils-pen-notebook-paper-79046621.jpg" alt=""></img>
-                </div> */}
+           
         </div>
 
 
@@ -66,7 +63,8 @@ const Admin = () => {
 
 
         <div className='storageForm1'>
-            <form onSubmit={handleSubmit}>
+            
+            <form onSubmit={handleSubmit} className='spacing4' >
                 <h2 id="create">Create New Storage</h2>
                 <div className='form-group'>
                     <label>Description</label>
@@ -141,10 +139,11 @@ const Admin = () => {
                 </div>
 
                     
-                    <button type='submit' >Create Storage</button>
+                    <button type='submit'  className='btn'>Create Storage</button>
             </form>
 
         </div>
+        <div className='spacing4' ></div>
 <div className="units">
     <div className="container">
         <div className="row">
@@ -155,6 +154,7 @@ const Admin = () => {
 
     </div>
 </div>
+<div className="spacing3"></div>
 
         </>
      );

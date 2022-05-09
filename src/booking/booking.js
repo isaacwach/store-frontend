@@ -31,11 +31,11 @@ const Booking = () => {
     return ( 
         <>
         <div className="booking" >
-            <div className="spacing3">
+            <div className="spacing2">
 
             </div>
     
-            <div className="booking-hero text-center" >
+            <div className="booking-hero text-center " >
 
                 <h1> Welcome to our online store </h1>
                 <h3>Book your slot according to the goods you intend to store. </h3>
@@ -43,7 +43,7 @@ const Booking = () => {
                 <h3>Book now!!</h3>
               
             </div>
-            <div className="storage-header">
+            <div className="storage-header spacing4">
                     <h1 className="text-center" > Our Storage Solutions</h1>
                 </div>
 
