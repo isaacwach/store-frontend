@@ -6,7 +6,7 @@ import {useParams} from 'react-router-dom';
 
 const Order = () => {
         const [iftransport, setifTransport]= useState(false)
-        const [promptTp, setPromptTp]= useState(true)
+        const [promptTp, setPromptTp]= useState(true) 
 
         const { id }= useParams();
         const API_URL = `https://store58.herokuapp.com/api/unit/unit-id/${id}`
@@ -65,8 +65,20 @@ const Order = () => {
     <div className="spacing" >
 
     </div>
+    <div>
+            {promptTp && <div className="text-center" > <h3> Would you like transport for this booking?</h3>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false)}> No </button>
+        </div>}
+             
+        </div>
+        <div  className="spacing3">
 
-    <div className="Booking-Form">
+        </div>
+    <div className="container">
+        <div className="row">
+
+    <div className="Booking-Form col-md-6">
 
 
         <form onSubmit={handleSubmit} >
@@ -101,7 +113,7 @@ const Order = () => {
                 />
                 </div>
 
-             <div className="form-group">
+             <div className="form-group" style={{"display": "none"}} >
             <label> Storage Unit </label>
             <input  className="form-control"
             type="text"
@@ -136,50 +148,21 @@ const Order = () => {
             value={description}
             onChange={(e)=>{setDescription(e.target.value)}} />
         </div>
-        <div>
-            {promptTp && <div> <h3> Would you like transport for this booking?</h3>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false)}> No </button>
-        </div>}
-             
-        </div>
-            {!isPending && <button type="submit"> Book Storage </button>}
-            {isPending && <button> Booked</button>}
+        
+            {!isPending && <button type="submit" className="btn"> Book Storage </button>}
+            {isPending && <button className="btn btn-primary"> Booked</button>}
         </form>
         </div>
 
 
-
-
-
-
-
-
-{/* 
-
-        <div className="container">
-        <div className="Row">
-        <div div className="col-md-5">
-            
-        </div>
-        <div>
-            {promptTp && <div> <h3> Would you like transport for this booking?</h3>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false)}> No </button>
-        </div>}
-             
-        </div> */}
-       
-        {/* </div> */}
-        <div className="container" >
-            <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-6">
 
         {transport &&  <TransportForm />}
         </div>
-        </div>
-        </div>
 
+
+        </div>
+        </div>
         <div className="spacing2">
 
         </div>
