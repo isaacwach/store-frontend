@@ -6,7 +6,7 @@ const RegisterButton = () => {
         <>
         <div className='spacing'></div>
         <div className='signUp'>
-                <h3 className='hero' >WELCOME TO CLASSIC STORE </h3>
+                <h3 className='hero1' >WELCOME TO CLASSIC STORE </h3>
                <h3 className='section'>REGISTER WITH US AND GET THE FILL OF OUR SERVICES</h3>
             <div className='container d-flex justify-content-between mt-5'>
             <div className='flex-fill'>

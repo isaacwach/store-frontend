@@ -6,7 +6,6 @@ import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import SignUp from './SignUp/SignUp';
 import Order from './bookingfiles/order.js';
-// import LoginAdmin from './Login/Login.js';
 import LoginAdmin from './LoginAdmin/LoginAdmin.js';
 import Footer from './footer/footer.js'
 // import Storage from './details/details.js';
@@ -32,7 +31,6 @@ const App= () => {
     <Route exact path='/'>
 <Home />
     </Route>
-
 <Route path='/details' >
 <Storage />
 </Route> 
@@ -41,8 +39,8 @@ const App= () => {
 </Route> 
 
 <Route exact path='/booking'>
-
 <Booking />
+<CPrivateRoute />
 </ Route>
 
 <Route exact path='/admin'>

@@ -12,7 +12,7 @@ export const APrivateRoute=({component:Component, path, ...rest})=>{
                       if(state.isLoading){
                           return <h3>Loading....</h3>
                       }else if(!state.isAuthenticated &&  !state.isAdmin){
-                          return <Redirect to="/login"/>
+                          return <Redirect to="/admin"/>
                       }else{
                           return <Component {...props}/>
                       }
