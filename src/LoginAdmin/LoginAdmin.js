@@ -76,7 +76,7 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
                   className="w-100"
                   height="700px"
                   alt="loginimage"
-                  src="images/signup.svg"
+                  src={require('../images/signup.svg').default}
                 />
               </Col>
             </Row>
