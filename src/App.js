@@ -9,7 +9,7 @@ import Order from './bookingfiles/order.js';
 // import LoginAdmin from './Login/Login.js';
 import LoginAdmin from './LoginAdmin/LoginAdmin.js';
 import Footer from './footer/footer.js'
-// import Details from './details/details.js';
+// import Storage from './details/details.js';
 import AdminSignup from './components/AdminSignup';
 import RegisterButton from './components/RegisterButton.js';
 // import AdminSignup from './AdminSignup/AdminSignup';

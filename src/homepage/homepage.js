@@ -62,13 +62,13 @@ const Home = (props) => {
             <h3>What our Esteemed Clients are Saying</h3>
             <div className="row test-cards">
                 <div className="col-md-3 col-xs-6">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc5IoLCd1lK4qcN3c1yLp5PSNqH8eWkVMgQ&usqp=CAU'} name={'Leonard Gucci'} text={'lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty'}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc5IoLCd1lK4qcN3c1yLp5PSNqH8eWkVMgQ&usqp=CAU'} name={'Leonard Gucci'} text={'“I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all.'}/>
                 </div>
                 <div className="col-md-3 col-xs-6">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0y7QXKa_TXgj-MfT9cgoSMgVYmJom8rgk2Q&usqp=CAU'} name={"Mark Weber"} text={"lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet amet sur jitr opium"}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0y7QXKa_TXgj-MfT9cgoSMgVYmJom8rgk2Q&usqp=CAU'} name={"Mark Weber"} text={"I am glad you came along at the right time. You have given us gonvinience and assurance that our goods can be secure in the hands of a third party storage company. Your services are the best without any doubt"}/>
                 </div>
                 <div className="col-md-3">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHLa4XhpI8VvjML0INdf5BhorGuJT-hP73w&usqp=CAU'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty"}/>
+                    <Card src={'https://i.dailymail.co.uk/1s/2019/09/19/12/18665066-7481357-Gov_uk_passport_renewal_s_automated_check_told_Mr_Bada_it_looks_-m-2_1568891073486.jpg'} name={"Duncan Opiyo"} text={"lorem ipsum dolor sit amet amet sur jitr lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty"}/>
                 </div>
                 <div className="col-md-3">
                     <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYqft8X-xxN5wBA6XI3y_-zuD69qNPTB9KcA&usqp=CAU'} name={"Sarah Mukami"} text={"lorem ipsum dolor sit amet amet sur jitr opium lorem ipsum dolor sit amet lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty lorem ipsum dolor sit amet, consectetur adipiscing elit lorem vty"}/>
