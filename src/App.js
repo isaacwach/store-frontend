@@ -1,31 +1,82 @@
 import React from 'react';
-import { Container, Navbar, NavDropdown,Nav } from 'react-bootstrap';
-
+import NavbarHead from './navbar/navbar.js';
+import Home from './homepage/homepage.js';
+import Admin from './admin/admin.js';
+import Booking from './booking/booking.js';
+import GetBookings from './requests/request.js';
+import SignUp from './SignUp/SignUp';
+import Order from './bookingfiles/order.js';
+// import LoginAdmin from './Login/Login.js';
+import LoginAdmin from './LoginAdmin/LoginAdmin.js';
+import Footer from './footer/footer.js'
+// import Storage from './details/details.js';
+import AdminSignup from './components/AdminSignup';
+import RegisterButton from './components/RegisterButton.js';
+// import AdminSignup from './AdminSignup/AdminSignup';
+import { APrivateRoute } from './private/PrivateRoute.js';
+import { CPrivateRoute } from './private/PrivateRoute.js';
+import "./App.css"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Storage from './details/details.js';
 
 
 const App= () => {
-    return (    
-        <Navbar bg="light" expand="lg">
-  <Container>
-    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-    );
+
+  return (
+      <>
+    
+<NavbarHead />
+<Router>
+  <Switch>
+
+    <Route exact path='/'>
+<Home />
+    </Route>
+
+<Route path='/details' >
+<Storage />
+</Route> 
+<Route path='/booking/order/:id'>
+  <Order />
+</Route> 
+
+<Route exact path='/booking'>
+
+<Booking />
+</ Route>
+
+<Route exact path='/admin'>
+  <Admin />
+  </Route>
+<Route path='/sbooking'>
+  <GetBookings />
+</Route>
+<Route path='/login'>
+  <LoginAdmin />
+</Route>
+<Route path='/signup'>
+  <SignUp />
+</Route>
+<Route path='/admin/signup'>
+  <AdminSignup /> 
+</Route>
+<Route path='/register/button'>
+  <RegisterButton />
+</Route>
+<Route path ='/admin'>
+  <APrivateRoute />
+
+</Route>
+<Route path='/' >
+<CPrivateRoute />
+</Route>
+</Switch>  
+</Router>
+<Footer />
+
+</>
+  )
+
 }
 
-
-export default App;
+export default App ;

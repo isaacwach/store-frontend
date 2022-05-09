@@ -1,0 +1,14 @@
+.signUp{
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.hero{
+    color: orange;
+}
+.hero,.section{
+    text-align: center;
+    font-style: italic;
+}
+.btn5{
+    width: 150px;
+}
