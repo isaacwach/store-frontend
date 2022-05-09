@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 
 const TransportForm = () => {
@@ -14,23 +14,24 @@ const TransportForm = () => {
     const [description, setDescription] = useState('')
     const [phone_no, setPhoneNo] = useState('')
     const [request_date, setRequestDate] = useState('')
-    const[delivery_date, setDeliveryDate] = useState('')
+    const[delivery_date, setDeliveryDate] = useState('2022-7-8')
     const [storage, setStorage] = useState('')
     const [client, setClient] = useState('')
     const [pickup_location, setPickupLocation] = useState('')
 
+    
+
     const handleSubmit= (e) => {
         e.preventDefault();
-        const transport= {destination, delivery_fee, client_name, description, destination_address, delivery_date, phone_no,request_date,storage, client, pickup_location};
+        const transport= {destination, delivery_fee, delivery_date, client_name, description, destination_address, phone_no,request_date,storage, client, pickup_location};
         fetch(`${Transport_URL}`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(transport)}
             )
             .then( ()=> {
-            console.log('New booking made!');
+            console.log('Transpor for this unit was added!');
             console.log(JSON.stringify(transport))
-            // setPending(true)
         })
     }
 
@@ -90,6 +91,14 @@ const TransportForm = () => {
                     onChange={ (e) => {setDescription(e.target.value)}}
                     />
                 </div>
+
+                {/* <div className="form-group" style={{"display": "none"}} > 
+                    <label> Pickup Date </label>
+                    <input className="form-control"
+                    type="text"
+                    value={"2022-5-23"}
+                    />
+                </div> */}
 
                 <div className="form-group"> 
                     <label> Pickup Location </label>
