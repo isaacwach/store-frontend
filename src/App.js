@@ -33,15 +33,14 @@ const App= () => {
     </Route>
 <Route path='/details' >
 <Storage />
-<APrivateRoute />
 </Route> 
 <Route path='/booking/order/:id'>
   <Order />
 </Route> 
 
 <Route exact path='/booking'>
-
 <Booking />
+<CPrivateRoute />
 </ Route>
 
 <Route exact path='/admin'>

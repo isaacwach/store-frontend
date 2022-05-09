@@ -20,7 +20,7 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
   };
 
   if (isAuthenticated && isAdmin) {
-    return <Redirect to="/admin" />;
+    return <Redirect to="/admin/" />;
   } else if (isAuthenticated && !isAdmin) {
     return <Redirect to="/" />;
   } else {

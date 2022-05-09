@@ -15,7 +15,6 @@ const NavbarHead = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link className="home" href="/">Home</Nav.Link>
-                    <h2> {client.id} </h2>
                     <Nav.Link className="details" href="/details">Details</Nav.Link>
                     <a href="/register/button"> <button className="btn3 btn-warning">Signup</button></a>
                     <a href="/login"><button className="btn4 btn-warning">Login</button></a>
