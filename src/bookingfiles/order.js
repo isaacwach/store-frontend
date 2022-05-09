@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import TransportForm from '../transport/transport';
 import {useParams} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 
@@ -68,7 +69,7 @@ const Order = () => {
     <div>
             {promptTp && <div className="text-center" > <h3> Would you like transport for this booking?</h3>
             <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false)}> No </button>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
         </div>}
              
         </div>
@@ -160,7 +161,7 @@ const Order = () => {
         {transport &&  <TransportForm />}
         </div>
 
-
+        <Link to="/details">View Booking Details </Link>
         </div>
         </div>
         <div className="spacing2">

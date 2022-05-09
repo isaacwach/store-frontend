@@ -1,14 +1,32 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { useState} from 'react';
-import StorageUnits from './Storages';
-import DeleteUnits from './AdminDelete';
+import AdminStorageCard from './AdminStorageCard';
+import {useState, useEffect} from 'react';
 
 
 
 
 const Admin = () => {
+    const [storages, setStorages]= useState([])
+    const getStorages= async () => {
+
+        const response= await fetch(`${API_URL}`,
+     {
+        method:'GET',
+        headers:{'Content-Type': 'application/json'
+
+    }})
+        const data = await response.json();
+
+        setStorages(data)
+        console.log(storages)
+    }
+    useEffect( () => {
+        getStorages()
+    }, []);
+
+
     const API_URL = 'https://store58.herokuapp.com/api/storage/unit/'
     const [description, setDescription]=useState('')
     const [size,setSize]=useState('')
@@ -128,8 +146,14 @@ const Admin = () => {
 
         </div>
 <div className="units">
-    <StorageUnits/>
+    <div className="container">
+        <div className="row">
 
+        <AdminStorageCard storages={storages} />
+        </div>
+
+
+    </div>
 </div>
 
         </>
