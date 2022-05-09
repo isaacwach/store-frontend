@@ -23,3 +23,11 @@ margin-top: 30px;
 margin-bottom: 30px;
 background-color:#FDAA53 ;
 } 
+
+.storageCard1 card{
+    background-color: grey;
+    display: flex;
+}
+.row{
+    width: 100px;
+}

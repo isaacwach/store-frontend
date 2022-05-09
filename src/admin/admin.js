@@ -1,6 +1,9 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { useState} from 'react';
 import StorageUnits from './Storages';
+import DeleteUnits from './AdminDelete';
 
 
 
@@ -28,7 +31,9 @@ const Admin = () => {
         }
     return ( 
         <>
+
         <div>
+            
             <div className="welcome">
                 WELCOME TO ADMIN PAGE
             </div>
