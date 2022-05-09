@@ -35,7 +35,7 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
     }
     return (
         <div className="body">
-      <Container className='container'>
+      <Container className='container-fluid'>
         <Row>
           <Col lg={4} md={6} sm={12}>
             <img src='/images/profile.png' alt='profileicon'/>
@@ -77,7 +77,7 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
             </Form>
           </Col>
           <Col lg={8} md={6} sm={12}>
-            <img className='w-100' height="700px" alt='signuplogo' src='/images/signup.svg'/>
+            <img className='w-100' height="700px" alt='signuplogo' src={require('../images/signup.svg').default}/>
           </Col>
         </Row>
 
