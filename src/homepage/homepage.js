@@ -62,7 +62,7 @@ const Home = (props) => {
             <h3>What our Esteemed Clients are Saying</h3>
             <div className="row test-cards">
                 <div className="col-md-3 col-xs-6">
-                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc5IoLCd1lK4qcN3c1yLp5PSNqH8eWkVMgQ&usqp=CAU'} name={'Leonard Gucci'} text={'“I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all.'}/>
+                    <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc5IoLCd1lK4qcN3c1yLp5PSNqH8eWkVMgQ&usqp=CAU'} name={'Leonard Gucci'} text={'“I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manamge. I never have any problem at all.'}/>
                 </div>
                 <div className="col-md-3 col-xs-6">
                     <Card src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0y7QXKa_TXgj-MfT9cgoSMgVYmJom8rgk2Q&usqp=CAU'} name={"Mark Weber"} text={"I am glad you came along at the right time. You have given us gonvinience and assurance that our goods can be secure in the hands of a third party storage company. Your services are the best without any doubt"}/>
