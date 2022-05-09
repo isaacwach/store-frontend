@@ -31,7 +31,7 @@ const Booking = () => {
     return ( 
         <>
         <div className="booking" >
-            <div className="spacing">
+            <div className="spacing3">
 
             </div>
     
