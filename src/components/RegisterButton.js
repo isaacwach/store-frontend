@@ -15,7 +15,7 @@ const RegisterButton = () => {
                 <div className="card-body">
                 <img className="card-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcxwj0yCkum1HJtNkWX2_cmndrrVoP_z0pg&usqp=CAU" alt=""></img>
                     <h5 className="card-title"> <h2>Employer/Admin</h2></h5>
-                    <p className="card-text"><a href="/admin/signup"> <button className="btn5 btn-warning">Signup</button></a></p>
+                    <p className="card-text"><a href="/sign/admin"> <button className="btn5 btn-warning">Signup</button></a></p>
                 </div>
             </div>
                 
