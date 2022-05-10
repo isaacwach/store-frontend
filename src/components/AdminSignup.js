@@ -30,7 +30,7 @@ const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
        console.log(newAdmin)
     create_adminuser(newAdmin)
    }
-    if(isAuthenticated && isAdmin){
+  if(isAuthenticated && isAdmin){
         return <Redirect to="/admin" />
     }
     return (
