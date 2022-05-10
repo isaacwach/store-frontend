@@ -67,9 +67,9 @@ const Admin = () => {
 
 
         <div className='storageForm1'>
-            
+            <h2 id="create">Create New Storage</h2>
             <form onSubmit={handleSubmit} className='spacing4' >
-                <h2 id="create">Create New Storage</h2>
+                
                 <div className='form-group'>
                     <label>Description</label>
                     <input className='form-control'
