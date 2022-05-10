@@ -30,46 +30,10 @@ const Storage = () => {
     }, []);
 
     return (
-      <StoragesCard mystorages={mystorages.filter((storage)=>storage.id===3)} />
+      <StoragesCard mystorages={mystorages.filter((storage)=>storage.id===14)} />
     )
 
   
 }
-const Pop = (props) =>{
-  const [buttonPopup, setButtonPopup]=useState(false);
-  return (
-    <>
-    <button className="btn-details" onClick={ () => setButtonPopup(true)}>Exit storage</button>
-    <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
-      <div className="pop-form">
-          <form className="form1">
-              <h3>Fill in Your Details</h3>
-              <label>Fullname:<br/>
-                  <input className="fname" type="text" placeholder="Enter your fullname"/>
-              </label><br/>
-              <label>Move in date:<br/>
-                  <input id='date' type="date" />
-              </label><br/>
-              <label>Expected move our date:<br/>
-                  <input id='date' type="date" />
-              </label>
-              <p>Do want want your goods delivered?</p>
-              <div className='radio'>
-                <input type="radio" value="Male" name="gender" /> Yes
-                <input type="radio" value="Female" name="gender" /> No
-              </div>
-              <div className="form-buttons"> 
-                  <button className="btn-btn1">Submit</button>
-                  <button className="btn-btn2" onClick={() => props.setTrigger(false)} >Close</button>
-              </div>
-          </form>
-
-      </div>
-                       
-    </Popup>
-    </>
-  );
-}
-
 
 export default Storage;

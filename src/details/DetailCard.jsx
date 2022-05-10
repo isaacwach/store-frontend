@@ -10,23 +10,27 @@ const StoragesCard = (props) => {
     return (
         <>
             {mystorages.map((mystorage) => (
-                <div className="storage col-md-4" key={mystorage.id}>
-                    <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title id="black" >Unit: {mystorage.id}</Card.Title>
-                        <Card.Text>
-                        <p>Size: {mystorage.size} m²</p>
-                        <p>Price: {mystorage.price}</p>
-                        <p>Category: {mystorage.categories}</p>
-                        <p>Status: {mystorage.status}</p>
-                        <p>Description: {mystorage.description}</p>
-                        </Card.Text>
-                        <Pop></Pop>
-                    </Card.Body>
-                </Card> 
-                    
-                    
-             </div>
+                <div className="row details-row">
+                    <div className="mystorage col-md-6" key={mystorage.id}>
+                        <Card style={{ width: '22rem', fontSize: '22px'}}>
+                        <Card.Body>
+                            <Card.Title id="black-title" >Unit: {mystorage.id}</Card.Title>
+                            <Card.Text>
+                            <p>Size: {mystorage.size} m²</p>
+                            <p>Price: {mystorage.price}</p>
+                            <p>Category: {mystorage.categories}</p>
+                            <p>Status: {mystorage.status}</p>
+                            <p>Description: {mystorage.description}</p>
+                            </Card.Text>
+                            <Pop></Pop>
+                        </Card.Body>
+                    </Card> 
+                        
+                    </div>
+                    <div className="col-md-6">
+                        <img className="detail-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQccBKFFCxhQNkqfV4C-Bvft-BESQpHKd4WHQ&usqp=CAU"></img>
+                    </div>
+                </div>
             ))
         }
 
