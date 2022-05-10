@@ -41,7 +41,6 @@ const App= () => {
 
 <Route exact path='/booking'>
 <Booking />
-{/* <CPrivateRoute /> */}
 </ Route>
 
 <Route exact path='/admin'>
