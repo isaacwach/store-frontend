@@ -66,13 +66,7 @@ const Order = () => {
     <div className="spacing" >
 
     </div>
-    <div>
-            {promptTp && <div className="text-center" > <h3> Would you like transport for this booking?</h3>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
-        </div>}
-             
-        </div>
+
         <div  className="spacing3">
 
         </div>
@@ -153,16 +147,21 @@ const Order = () => {
             {!isPending && <button type="submit" className="btn"> Book Storage </button>}
             {isPending && <button className="btn btn-primary"> Booked</button>}
         </form>
+        {promptTp && <div className="text-center" > <h3> Would you like transport for this booking?</h3>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
+        </div>}
         </div>
 
 
-        <div className="col-md-6">
+       
+
+        {/* <Link to="/details">View Booking Details </Link> */}
+        </div>
+        </div>
+        <div className="Booking-Form spacing4">
 
         {transport &&  <TransportForm />}
-        </div>
-
-        <Link to="/details">View Booking Details </Link>
-        </div>
         </div>
         <div className="spacing2">
 
