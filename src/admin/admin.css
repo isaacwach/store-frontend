@@ -12,14 +12,15 @@
 
 .storageForm1{
     text-align: center;
-    background-color:grey ;
+    padding-top: 15px;
+    background-color:rgb(224, 223, 223) ;
    
 }
 .storageForm1 label{
     padding-top: 10px;
 }
 .storageForm1 .form-group{
-    margin-left: 450px;
+    margin-left: 780px;
     width: 350px;
     text-align: center;
 }
