@@ -26,7 +26,7 @@ const Admin = () => {
         getStorages()
     }, []);
 
-
+    const [isPending, setPending]=useState(true)
     const API_URL = 'https://store58.herokuapp.com/api/storage/unit/'
     const [description, setDescription]=useState('')
     const [size,setSize]=useState('')
@@ -44,6 +44,8 @@ const Admin = () => {
                 )
                 .then( ()=> {
                 console.log('New storage made!');
+                setPending(false)
+
                 console.log(JSON.stringify(storage))
             })
         }
@@ -139,7 +141,8 @@ const Admin = () => {
                 </div>
 
                     
-                    <button type='submit'  className='btn'>Create Storage</button>
+                    { isPending && <button type='submit'  className='btn'>Create Storage</button>}
+                    {!isPending && <button className='btn'  style={{backgroundColor:"rgb(235, 173, 18)",borderRadius:"12px"}}>Storage Created</button>}
             </form>
 
         </div>
