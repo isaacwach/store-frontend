@@ -26,9 +26,8 @@ margin: 15px;
 width: 100%;
 height: 720px;
 padding-top: 60px;
+overflow-x: hidden;
 }
-.profile-icon{
-  width: 120px;
-  margin-bottom: 15px;
-}
+
+
 

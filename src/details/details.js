@@ -1,86 +1,38 @@
-import React from 'react';
-import { useState } from 'react';
+// import React from 'react';
+// import { useState } from 'react';
 import Card from "react-bootstrap/Card";
 import Popup from '../popup/popup';
+import React from 'react';
+import {useState, useEffect} from 'react';
+import StoragesCard from './DetailCard';
+
+const API_URL = 'https://store58.herokuapp.com/api/storage/unit/'
 
 
-class Storage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todoList: [],
-      activeItem: {
-        image: "",
-        size:"",
-        price: "",
-        description: "",
-        categories: "",
-      },
-      editing: false,
+const Storage = () => {
+    const[loading, setLoading] = useState(false)
+    const [mystorages, setStorages]= useState([])
+    const getStorages= async () => {
+        const response= await fetch(`${API_URL}`,
+     {
+        method:'GET',
+        headers:{'Content-Type': 'application/json'
+
+    }})
+        const data = await response.json();
+
+        setStorages(data)
+        console.log(mystorages)
+        setLoading(true)
     }
-    this.fetchTasks=this.fetchTasks.bind(this)
-    
-  };
+    useEffect( () => {
+        getStorages()
+    }, []);
 
-  componentWillMount(){
-    this.fetchTasks()
-  }
-
-  fetchTasks(){
-    console.log("ayzaq")
-
-    fetch('https://store58.herokuapp.com/api/storage/unit/')
-    fetch('https://store58.herokuapp.com/api/booking/')
-    .then(response => response.json())
-    .then(data=> 
-      this.setState({
-        todoList: data,
-        filterData:[]
-      })
+    return (
+      <StoragesCard mystorages={mystorages.filter((storage)=>storage.id===3)} />
     )
-    
-  } 
 
-  render(){
-    var tasks = this.state.todoList
-    return(
-        <>
-                <div className="container detail-cards">
-        <div id="list-wrapper">
-          {tasks.map(function(task, filterData){
-             filterData= () =>{
-              if (task.description=='ddddd'){
-                var filteredData=this.state.todoList.filter((description) =>{
-                  return filteredData
-                })
-                
-              }
-              this.setState({
-                ...this.state,
-                filterData:filteredData
-              })
-            }
-            return(
-              <div key={filterData} className="task-wrapper flex-wrapper">
-                <Card style={{ width: '28rem' }} className="detail-card">
-                  <Card.Body>
-                    <Card.Title className='card-title'>Storage Details</Card.Title>
-                    <Card.Text>Unit size:  <span className="card-span">{task.size}</span></Card.Text>
-                    <Card.Text>Unit category: <span className="card-span">{task.categories}</span></Card.Text>
-                    <Card.Text>Unit Price: <span className="card-span">{task.price}</span></Card.Text>                 
-                    <Card.Text>Unit description: <span className="card-span">{task.description}</span></Card.Text>
-                    <Card.Text>Exit Date: <span className="card-span">{task.exit_date}</span></Card.Text>
-                    <Pop></Pop>
-                  </Card.Body>
-                </Card>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-        </>
-    )
-  }
   
 }
 const Pop = (props) =>{

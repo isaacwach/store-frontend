@@ -38,7 +38,7 @@ const ClientSignup = ({create_clientuser, isAuthenticated,isClient}) => {
       <Container className='container-fluid'>
         <Row>
           <Col lg={4} md={6} sm={12}>
-            <img src='/images/profile.png' alt='profileicon'/>
+          <img className="profile-icon" src="https://www.seekpng.com/png/full/41-410093_circled-user-icon-user-profile-icon-png.png" alt="profileicon" />
             <Form onSubmit={ e =>handleSubmit(e)}>
               <Form.Group className="mb-3" controlId="username">
                 <Form.Label>Username</Form.Label>
