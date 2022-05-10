@@ -5,12 +5,13 @@ import Admin from './admin/admin.js';
 import Booking from './booking/booking.js';
 import GetBookings from './requests/request.js';
 import SignUp from './SignUp/SignUp';
-// import LoginAdmin from './Login/Login.js';
+import Order from './bookingfiles/order.js';
 import LoginAdmin from './LoginAdmin/LoginAdmin.js';
 import Footer from './footer/footer.js'
-// import Details from './details/details.js';
+// import Storage from './details/details.js';
 import AdminSignup from './components/AdminSignup';
 import RegisterButton from './components/RegisterButton.js';
+import DeleteUnits from './admin/AdminDelete.js';
 // import AdminSignup from './AdminSignup/AdminSignup';
 import { APrivateRoute } from './private/PrivateRoute.js';
 import { CPrivateRoute } from './private/PrivateRoute.js';
@@ -31,18 +32,17 @@ const App= () => {
     <Route exact path='/'>
 <Home />
     </Route>
-
-{/* <Route path='/details' >
+<Route path='/details' >
 <Storage />
 </Route> 
-{/* <Route path='/booking/order'>
+<Route path='/booking/order/:id'>
   <Order />
-</Route> */}
+</Route> 
 
 <Route exact path='/booking'>
-
 <Booking />
 </ Route>
+
 <Route exact path='/admin'>
   <Admin />
   </Route>
@@ -61,13 +61,13 @@ const App= () => {
 <Route path='/register/button'>
   <RegisterButton />
 </Route>
-<Route exact path ='/admin'>
-  <APrivateRoute />
 
+<Route path ='/admin/delete/:id'>
+
+
+  <DeleteUnits />
 </Route>
-<Route path='/' >
-<CPrivateRoute />
-</Route>
+
 </Switch>  
 </Router>
 <Footer />

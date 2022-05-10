@@ -6,6 +6,7 @@ const API_URL = 'https://store58.herokuapp.com/api/storage/unit/'
 
 
 const Booking = () => {
+    const[loading, setLoading] = useState(false)
     const [storages, setStorages]= useState([])
     const getStorages= async () => {
         const response= await fetch(`${API_URL}`,
@@ -18,6 +19,7 @@ const Booking = () => {
 
         setStorages(data)
         console.log(storages)
+        setLoading(true)
     }
     useEffect( () => {
         getStorages()
@@ -29,20 +31,24 @@ const Booking = () => {
     return ( 
         <>
         <div className="booking" >
-            <div className="spacing">
+            <div className="spacing2">
 
             </div>
     
-            <div className="booking-hero text-center" >
+            <div className="booking-hero text-center " >
 
                 <h1> Welcome to our online store </h1>
                 <h3>Book your slot according to the goods you intend to store. </h3>
                 <h3>The safety of your goods is guaranteed</h3>
-                <h4>Book now!!</h4>
+                <h3>Book now!!</h3>
               
             </div>
-            <div className="storage-header">
+            <div className="storage-header spacing4">
                     <h1 className="text-center" > Our Storage Solutions</h1>
+                </div>
+
+                <div className="text-center">
+                    {!loading && <div > <h2>Loading ....</h2></div>}
                 </div>
      
             <div className="container">

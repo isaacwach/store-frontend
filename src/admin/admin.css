@@ -4,6 +4,11 @@
     padding-top: 50px;
 }
 
+.storageForm1 input {
+    display:flex;
+    align-items: center;
+    
+}
 
 .storageForm1{
     text-align: center;
@@ -18,8 +23,35 @@
     width: 350px;
     text-align: center;
 }
-.storageForm1 button{
+/* .storageForm1 button{
 margin-top: 30px;
 margin-bottom: 30px;
 background-color:#FDAA53 ;
-} 
+}  */
+
+.storageCard1 card{
+    background-color: grey;
+    display: flex;
+}
+/* .row{
+    width: 100px;
+} */
+.storageForm1 .btn{
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+    color:white;
+    background-color: #FDAA53;;
+}
+.storageForm1 .spacing4{
+    text-align: center;
+   
+}
+#create{
+text-align: center;
+
+margin-top: 40px;
+}
+.spacing3 .welcome spacing4{
+    text-align: center;
+}
