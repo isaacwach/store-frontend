@@ -17,7 +17,7 @@ import { APrivateRoute } from './private/PrivateRoute.js';
 import { CPrivateRoute } from './private/PrivateRoute.js';
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Storage from './details/details.js';
+// import Storage from './details/details.js';
 
 
 const App= () => {
@@ -55,13 +55,15 @@ const App= () => {
 <Route path='/signup'>
   <SignUp />
 </Route>
-<Route path='/admin/signup'>
+<Route exact path='/admin/signup'>
   <AdminSignup /> 
 </Route>
 <Route path='/register/button'>
   <RegisterButton />
 </Route>
+
 <Route path ='/admin/delete/:id'>
+
 
   <DeleteUnits />
 </Route>
