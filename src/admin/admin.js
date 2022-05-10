@@ -54,9 +54,11 @@ const Admin = () => {
 
         <div className="spacing3" >
             
-            <div className="welcome  spacing4 ">
-               <h1> WELCOME TO ADMIN PAGE</h1>
+            <div className="welcome spacing4 ">
+               <h1><marquee behavior="scroll" direction="up"> <center>WELCOME TO ADMIN PAGE</center></marquee></h1>
+               
             </div>
+           
            
         </div>
 

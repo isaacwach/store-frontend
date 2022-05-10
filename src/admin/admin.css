@@ -7,6 +7,7 @@
 .storageForm1 input {
     display:flex;
     align-items: center;
+    
 }
 
 .storageForm1{
@@ -35,3 +36,22 @@ background-color:#FDAA53 ;
 /* .row{
     width: 100px;
 } */
+.storageForm1 .btn{
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+    color:white;
+    background-color: #FDAA53;;
+}
+.storageForm1 .spacing4{
+    text-align: center;
+   
+}
+#create{
+text-align: center;
+
+margin-top: 40px;
+}
+.spacing3 .welcome spacing4{
+    text-align: center;
+}
