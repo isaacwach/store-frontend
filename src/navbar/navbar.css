@@ -8,7 +8,7 @@
     height: 40px;
     /* background-color: orange; */
     border-radius: 35px;
-    margin-left: 150px;
+    margin-left: 90px;
     font-size: 22px;
     margin-top: 5px;
 }
@@ -17,14 +17,14 @@
     height: 40px;
     background-color: rgb(153, 153, 153);
     border-radius: 35px;
-    margin-left: 100px;
+    margin-left: 110px;
     font-size: 22px;
     color: white;
     margin-top: 5px;
 }
 .home{
 
-    margin-left: 275px;
+    margin-left: 520px;
 
     font-size: 24px;
     font-weight: bold;
