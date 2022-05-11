@@ -86,12 +86,12 @@ Button {
 .modal-header, .modal-footer {
   padding: 10px;
   color:rgb(255, 149, 0);
-  text-align: center;
+  /* text-align: center; */
 
 }
 
 .modal-title{
-  text-align: center;
+  /* text-align: center; */
 }
 
 .modal-body {
