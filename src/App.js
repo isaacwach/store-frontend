@@ -17,6 +17,7 @@ import {CPrivateRoute} from './private/PrivateRoute.js'
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Storage from './details/details.js';
+import ProtectedRoute from './components/ProtectedRoute.js'
 
 
 const App= () => {
@@ -31,9 +32,9 @@ const App= () => {
     <Route exact path='/'>
 <Home />
     </Route>
-<Route path='/details' >
+<ProtectedRoute path='/details' >
 <Storage />
-</Route> 
+</ProtectedRoute> 
 <Route path='/booking/order/:id'>
   <Order />
 </Route> 

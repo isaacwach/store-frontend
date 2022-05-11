@@ -191,7 +191,7 @@ const Order = () => {
 
        
 
-        {/* <Link to="/details">View Booking Details </Link> */}
+    
         </div>
         </div>
         <div>
@@ -207,7 +207,8 @@ const Order = () => {
         </div>
         </>
 
-     );
+    );
     }
+
  
 export default Order;
