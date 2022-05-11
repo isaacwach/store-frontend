@@ -1,18 +1,16 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import { RedirectPath, Route, Redirect } from "react-router-dom";
 
-function ProtectedRoute({ component: Component, ...restOfProps }) {
-  const isAuthenticated = localStorage.getItem("isAuthenticated");
-  console.log("this", isAuthenticated);
+const ProtectedRoute = ({
+  user,
+  RedirectPath = '/details',
+  children,
+}) => {
+  if (!user) {
+    return <Redirect to="/login" />;
+  }
 
-  return (
-    <Route
-      {...restOfProps}
-      render={(props) =>
-        isAuthenticated ? <Component {...props} /> : <Redirect to="/signin" />
-      }
-    />
-  );
-}
+  return children;
+};
 
 export default ProtectedRoute;

@@ -18,9 +18,14 @@ import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Storage from './details/details.js';
 import ProtectedRoute from './components/ProtectedRoute.js'
+import { useDispatch, useSelector} from "react-redux"
+
+
 
 
 const App= () => {
+  const dispatch=useDispatch()
+  const auth= useSelector((state)=>state.auth)
 
   return (
       <>
@@ -33,6 +38,7 @@ const App= () => {
 <Home />
     </Route>
 <ProtectedRoute path='/details' >
+    
 <Storage />
 </ProtectedRoute> 
 <Route path='/booking/order/:id'>

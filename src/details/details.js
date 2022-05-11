@@ -30,7 +30,7 @@ const Storage = () => {
     }, []);
 
     return (
-      <StoragesCard mystorages={mystorages.filter((storage)=>storage.id===14)} />
+      <StoragesCard mystorages={mystorages.filter((storage)=>storage.id===16)} />
     )
 
   
