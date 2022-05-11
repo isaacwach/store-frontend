@@ -6,6 +6,30 @@ import {Link} from 'react-router-dom';
 
 
 const Order = () => {
+    const Modal= props => {
+    if(!props.show) {
+        return null
+    }
+    // const [bravo, setBravo]=useState(false)
+
+    return(
+        <div className='modal' onClick={props.onClose} >
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <div className="modal-header text-center">
+                    <h3 className="text-center" >Transport for unit {id}</h3>
+                </div>
+                <div className="modal-body">
+                    <div><TransportForm /></div>
+                </div>
+                <div classname="modal-footer">
+                    <button onClick={props.onClose}>Close</button>
+                </div>
+            </div>
+        </div>
+        
+    )
+}
+
         const [iftransport, setifTransport]= useState(false)
         const [promptTp, setPromptTp]= useState(true) 
 
@@ -58,6 +82,7 @@ const Order = () => {
             setPending(true)
         })
     }
+    const [show, setShow]=useState(false)
 
 
         
@@ -67,7 +92,8 @@ const Order = () => {
 
     </div>
 
-        <div  className="spacing3">
+        <div>
+        <Modal  onClose={()=>setShow(false)} show={show} />
 
         </div>
     <div className="container">
@@ -148,8 +174,13 @@ const Order = () => {
             {isPending && <button className="btn btn-primary"> Booked</button>}
         </form>
         {promptTp && <div className="text-center" > <h3> Would you like transport for this booking?</h3>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
-            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
+            <button className="btn" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
+
+            <div className="Booking-Form spacing4">
+
+    <button className="btn" onClick={()=>setShow(true)} >Yes</button>
+    {/* <Modal  onClose={()=>setShow(false)} show={show} /> */}
+    </div>
         </div>}
         </div>
 
@@ -159,9 +190,13 @@ const Order = () => {
         {/* <Link to="/details">View Booking Details </Link> */}
         </div>
         </div>
-        <div className="Booking-Form spacing4">
+        <div>
 
-        {transport &&  <TransportForm />}
+        </div>
+        <div>
+
+            {/* <button const onClick={()=>setShow(true)} >Show Modal</button> */}
+            {/* <Modal  onClose={()=>setShow(false)} show={show} /> */}
         </div>
         <div className="spacing2">
 
