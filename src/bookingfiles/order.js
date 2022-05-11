@@ -92,7 +92,7 @@ const Order = () => {
 
     </div>
 
-        <div>
+       <div>
         <Modal  onClose={()=>setShow(false)} show={show} />
 
         </div>
@@ -173,14 +173,10 @@ const Order = () => {
             {!isPending && <button type="submit" className="btn btn10 mt-4"> Book Storage </button>}
             {isPending && <button className="btn btn-primary"> Booked</button>}
         </form>
-        {promptTp && <div className="text-center" > <h3> Would you like transport for this booking?</h3>
-            <button className="btn" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
+        <div>
 
-            <div className="Booking-Form spacing4">
-
-    <button className="btn" onClick={()=>setShow(true)} >Yes</button>
-    </div>
-        </div>}
+    <button className="btn" onClick={()=>setShow(true)} >Transport</button>
+        </div>
 
         </div>
 
@@ -189,6 +185,7 @@ const Order = () => {
         </div>
         </div>
         <div>
+            
 
         </div>
        
