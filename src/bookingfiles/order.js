@@ -179,9 +179,9 @@ const Order = () => {
             <div className="Booking-Form spacing4">
 
     <button className="btn" onClick={()=>setShow(true)} >Yes</button>
-    {/* <Modal  onClose={()=>setShow(false)} show={show} /> */}
     </div>
         </div>}
+        
         </div>
 
 
@@ -193,11 +193,7 @@ const Order = () => {
         <div>
 
         </div>
-        <div>
-
-            {/* <button const onClick={()=>setShow(true)} >Show Modal</button> */}
-            {/* <Modal  onClose={()=>setShow(false)} show={show} /> */}
-        </div>
+       
         <div className="spacing2">
 
         </div>

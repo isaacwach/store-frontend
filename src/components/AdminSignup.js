@@ -4,6 +4,7 @@ import  PropTypes from "prop-types"
 import { create_adminuser } from '../actions/auth'
 import { Redirect } from 'react-router-dom'
 import {Col, Container, Row, Form } from "react-bootstrap";
+import {useHistory} from "react-router-dom";
 
 const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
     const [admin, setAdmin]=useState({
@@ -12,6 +13,7 @@ const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
         password:'',
         password2:''
     })
+    const history = useHistory()
 
     const handleChange=(e)=>setAdmin({
         ...admin,
@@ -29,6 +31,8 @@ const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
        }
        console.log(newAdmin)
     create_adminuser(newAdmin)
+    history.push('/login')
+
    }
     if(isAuthenticated && isAdmin){
         return <Redirect to="/admin" />
