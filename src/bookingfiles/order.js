@@ -170,9 +170,13 @@ const Order = () => {
             onChange={(e)=>{setDescription(e.target.value)}} />
         </div>
         
-            {!isPending && <button type="submit" className="btn"> Book Storage </button>}
+            {!isPending && <button type="submit" className="btn btn10 mt-4"> Book Storage </button>}
             {isPending && <button className="btn btn-primary"> Booked</button>}
         </form>
+        {promptTp && <div className="text-center mt-3" > <h3> Would you like transport for this booking?</h3>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}} onClick={()=>setTransport(true)}> Yes </button>
+            <button className="btn btn-sm" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
+
         {promptTp && <div className="text-center" > <h3> Would you like transport for this booking?</h3>
             <button className="btn" style={{backgroundColor:"rgb(235, 173, 18)"}}  onClick={()=>setPromptTp(false) }> No </button>
 

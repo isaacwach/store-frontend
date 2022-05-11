@@ -13,7 +13,7 @@ import AdminSignup from './components/AdminSignup';
 import RegisterButton from './components/RegisterButton.js';
 import DeleteUnits from './admin/AdminDelete.js';
 // import AdminSignup from './AdminSignup/AdminSignup';
-
+import {CPrivateRoute} from './private/PrivateRoute.js'
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Storage from './details/details.js';

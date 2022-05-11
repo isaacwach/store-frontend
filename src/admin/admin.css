@@ -20,9 +20,10 @@
     padding-top: 10px;
 }
 .storageForm1 .form-group{
-    margin-left: 780px;
+    margin-left: 800px;
     width: 350px;
-    text-align: center;
+    text-align: left;
+    font-size: 20px;
 }
 /* .storageForm1 button{
 margin-top: 30px;

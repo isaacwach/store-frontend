@@ -38,7 +38,7 @@ const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
       <Container className='container'>
         <Row>
           <Col lg={4} md={6} sm={12}>
-            <img src='/images/profile.png' alt='profileicon'/>
+          <img className="profile-icon" src="https://www.seekpng.com/png/full/41-410093_circled-user-icon-user-profile-icon-png.png" alt="profileicon" />
             <Form onSubmit={ e =>handleSubmit(e)}>
               <Form.Group className="mb-3" controlId="username">
                 <Form.Label>Username</Form.Label>
@@ -76,7 +76,12 @@ const AdminSignup = ({create_adminuser, isAuthenticated,isAdmin}) => {
             </Form>
           </Col>
           <Col lg={8} md={6} sm={12}>
-            <img className='w-100' height="700px" alt='signuplogo' src='/images/signup.svg'/>
+          <img
+                  className="w-100"
+                  height="700px"
+                  alt="loginimage"
+                  src={require('../images/signup.svg').default}
+                />
           </Col>
         </Row>
 
