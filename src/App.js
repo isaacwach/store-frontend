@@ -20,12 +20,7 @@ import Storage from './details/details.js';
 import { useDispatch, useSelector} from "react-redux"
 
 
-
-
 const App= () => {
-  const dispatch=useDispatch()
-  const auth= useSelector((state)=>state.auth)
-
   return (
       <>
     
@@ -36,8 +31,8 @@ const App= () => {
     <Route exact path='/'>
 <Home />
     </Route>
-    
 <Route path='/details' >
+    
 <Storage />
 </Route> 
 <Route path='/booking/order/:id'>
