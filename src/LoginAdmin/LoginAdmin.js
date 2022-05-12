@@ -20,7 +20,7 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
   };
 
   if (isAuthenticated && isAdmin) {
-    return <Redirect to="/admin" />;
+    return <Redirect to="/admin/" />;
   } else if (isAuthenticated && !isAdmin) {
     return <Redirect to="/" />;
   } else {
@@ -31,7 +31,7 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
             <br></br>
             <Row>
               <Col lg={4} md={6} sm={12}>
-                <img src="/images/profile.png" alt="profileicon" />
+                <img className="profile-icon" src="https://www.seekpng.com/png/full/41-410093_circled-user-icon-user-profile-icon-png.png" alt="profileicon" />
                 <Form onSubmit={(e) => handleLoginSubmit(e)}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Username</Form.Label>
@@ -76,7 +76,7 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
                   className="w-100"
                   height="700px"
                   alt="loginimage"
-                  src="images/signup.svg"
+                  src={require('../images/signup.svg').default}
                 />
               </Col>
             </Row>

@@ -1,31 +1,43 @@
 import React from 'react';
-import {Card} from 'react-bootstrap';
-// import {useState} from 'react';
+import {Card,Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 
-const AdminStorageCard = ({prop}) => {
-    // const [show, setShow]=useState(false)
+
+const AdminStorageCard = (props) => {
+    
+    
+    const storages=props.storages
+
+
     return (
-        <div className="storageCard" key={prop.id}>
+        <>
+        {storages.map((storage) => (
+            <div className="storage col-md-4" key={storage.id}>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>Unit: {prop.id}</Card.Title>
-                        <Card.Text>
-                        <p>Size: {prop.size} m^2</p>
-                        <p>Price: {prop.price}</p>
-                        <p>Category: {prop.categories}</p>
-                        <p>Status: {prop.status}</p>
-                        <p>Description: {prop.description}</p>
-                        </Card.Text>
-                        {/* <div className="snap">
-                            <button  onClick={()=>{setShow(true)}} className="btn" style={{backgroundColor:"rgb(235, 173, 18)",borderRadius:"12px"}}> Book now </button>
-                            <Modal onClose={()=>{setShow(false)}} show={show}/>
-                        </div>                    */}
-                    </Card.Body>
-                </Card>
-            </div>
-      );
+                <Card.Body>
+                    <Card.Title id="black" >Unit: {storage.id}</Card.Title>
+                    <Card.Text>
+                    <p>Size: {storage.size} m²</p>
+                    <p>Price: {storage.price}</p>
+                    <p>Category: {storage.categories}</p>
+                    <p>Status: {storage.status}</p>
+                    <p>Description: {storage.description}</p>
+                    </Card.Text>
+                    <Link to={`admin/delete/${storage.id}`}><button className="btn btn-danger" style={{borderRadius:"12px"}}> Delete  </button></Link>
+                </Card.Body>
+            </Card> 
+                
+                
+         </div>
+        ))
+    }
+
+    </>
+    )
+        
+       
 }
  
 export default AdminStorageCard;

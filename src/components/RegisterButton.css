@@ -1,11 +1,12 @@
 .signUp{
-    margin-top: 100px;
+    margin-top: 70px;
     margin-bottom: 200px;
 }
-.hero{
+.hero1{
     color: orange;
+    margin-bottom: 20px;
 }
-.hero,.section{
+.hero1,.section{
     text-align: center;
     font-style: italic;
 }

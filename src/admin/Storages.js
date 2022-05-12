@@ -32,23 +32,17 @@ const StorageUnits = () => {
         <>
         <div className="storage" >
     
-            {/* <div className="booking-hero text-center" >
-
-                <h2> Welcome to our online store </h2>
-                <h3>Book your slot according to the goods you intend to store. </h3>
-                <h3>The safety of your goods is guaranteed</h3>
-                <h4>Book now!!</h4>
-              
-            </div> */}
-            <div className="container">
+            
+            <div className="container ">
                     <h1 className="text-center" > All  storages</h1>
 
                         <div className="container">
-                            
+                            <div className="row">
+                                
                         {storages.map((storage) =>(
-                            <AdminStorageCard prop={storage} />
+                            <AdminStorageCard storages={storage} />
                         ))}
-                       
+                       </div>
                         </div>
 
             </div>

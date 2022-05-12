@@ -15,6 +15,7 @@ import { ADMIN_USER_LOADED } from "../actions/types"
         token:localStorage.getItem('token'),
         isAuthenticated:false,
         isClient:null,
+        isAdmin:null,
         isLoading:false,
         user:null
     }     
@@ -30,6 +31,7 @@ import { ADMIN_USER_LOADED } from "../actions/types"
                     ...action.payload,
                     isAuthenticated:true,
                     isClient:action.payload.user.is_client,
+                    isAdmin:action.payload.user.is_admin,
                     isLoading:false
                 }
              case ADMIN_USER_LOADED:
@@ -55,7 +57,8 @@ import { ADMIN_USER_LOADED } from "../actions/types"
                     ...action.payload,
                     isAuthenticated:true,
                     isLoading:false,
-                    isClient:action.payload.is_admin,
+                    isClient:action.payload.is_client,
+                    isAdmin:action.payload.is_admin,
                     
                 }
     
@@ -67,6 +70,7 @@ import { ADMIN_USER_LOADED } from "../actions/types"
                     ...state,
                     token:null,
                     isClient:null,
+                    isAdmin:null,
                     isAuthenticated:false,
                     isLoading:false
                 }
@@ -79,6 +83,7 @@ import { ADMIN_USER_LOADED } from "../actions/types"
                         ...state,
                         token:null,
                          isClient:null,
+                         isAdmin:null,
                         isAuthenticated:false,
                          isLoading:false,
                      }
