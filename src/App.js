@@ -89,8 +89,6 @@ const App= () => {
 </Route>
 
 <Route path ='/admin/delete/:id'>
-
-
   <DeleteUnits />
 </Route>
 

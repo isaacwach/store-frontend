@@ -1,5 +1,6 @@
 import React from "react";
 import {useState, useEffect} from 'react';
+import {useHistory} from 'react-router-dom';
 
 
 const TransportForm = () => {
@@ -20,7 +21,7 @@ const TransportForm = () => {
     const [pickup_location, setPickupLocation] = useState('')
     const [transportConfirmed, setTransportConfirmed] = useState(false)
 
-    
+    const history = useHistory()
 
     const handleSubmit= (e) => {
         e.preventDefault();
@@ -34,6 +35,8 @@ const TransportForm = () => {
             console.log('Transpor for this unit was added!');
             console.log(JSON.stringify(transport))
             setTransportConfirmed(true)
+            history.push('/details')
+            
         })
     }
 

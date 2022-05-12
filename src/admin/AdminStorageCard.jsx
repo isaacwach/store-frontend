@@ -25,7 +25,7 @@ const AdminStorageCard = (props) => {
                     <p>Status: {storage.status}</p>
                     <p>Description: {storage.description}</p>
                     </Card.Text>
-                    <Link to={`admin/delete/${storage.id}`}><button className="btn btn-danger" style={{borderRadius:"12px"}}> Delete  </button></Link>
+                    <Link to={`delete/${storage.id}/`}><button className="btn btn-danger" style={{borderRadius:"12px"}}> Delete  </button></Link>
                 </Card.Body>
             </Card> 
                 

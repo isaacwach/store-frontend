@@ -24,7 +24,7 @@ const DeleteUnits = () => {
     }}).then(
         ()=>{
             console.log('I was called on page load')
-            history.push('/admin')
+            history.go(-1);
 
         }
     )
@@ -42,11 +42,12 @@ useEffect( () => {
         <div className="storage" >
             <div className="spacing"></div>
 
-        <h3>{id}</h3>
     
         <h1 className="btn-danger" > Storage unit {id} has been successfully deleted </h1>
 
         <div className="spacing2"></div>
+        <div className="spacing"></div>
+        <div className="spacing"></div>
 
     
         </div>
