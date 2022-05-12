@@ -3,6 +3,12 @@
     margin-left: auto;
    
 }
+.home, .details {
+    color: grey;
+    text-decoration: none;
+
+    
+}
 .btn3{
     width: 130px;
     height: 40px;
