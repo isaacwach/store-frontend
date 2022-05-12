@@ -24,7 +24,7 @@ const NavbarHead = () => {
                     <a href='/'><button onClick={()=>dispatch(logout())} className='btn4 btn-warning'>Logout</button></a>
                 </Nav>
             
-            </Navbar.Collapse>s
+            </Navbar.Collapse>
             </Container>
         </Navbar>             
              </>:
