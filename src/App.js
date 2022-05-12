@@ -17,16 +17,10 @@ import {CPrivateRoute} from './private/PrivateRoute.js'
 import "./App.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Storage from './details/details.js';
-import ProtectedRoute from './components/ProtectedRoute.js'
 import { useDispatch, useSelector} from "react-redux"
 
 
-
-
 const App= () => {
-  const dispatch=useDispatch()
-  const auth= useSelector((state)=>state.auth)
-
   return (
       <>
     
@@ -37,10 +31,10 @@ const App= () => {
     <Route exact path='/'>
 <Home />
     </Route>
-<ProtectedRoute path='/details' >
+<Route path='/details' >
     
 <Storage />
-</ProtectedRoute> 
+</Route> 
 <Route path='/booking/order/:id'>
   <Order />
 </Route> 
