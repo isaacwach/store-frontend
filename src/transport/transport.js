@@ -18,6 +18,7 @@ const TransportForm = () => {
     const [storage, setStorage] = useState('')
     const [client, setClient] = useState('')
     const [pickup_location, setPickupLocation] = useState('')
+    const [transportConfirmed, setTransportConfirmed] = useState(false)
 
     
 
@@ -32,6 +33,7 @@ const TransportForm = () => {
             .then( ()=> {
             console.log('Transpor for this unit was added!');
             console.log(JSON.stringify(transport))
+            setTransportConfirmed(true)
         })
     }
 
@@ -121,7 +123,8 @@ const TransportForm = () => {
 
              
 
-                <button className="btn"> Add transport </button>
+               { !transportConfirmed && <button className="btn" type="submit"> Add transport </button>}
+               {transportConfirmed  && <btn className="btn btn-primary">Success</btn>}
             </form>
         </div>
     

@@ -4,12 +4,11 @@ import {connect} from "react-redux"
 import {login} from "../actions/auth"
 import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types"
-const Login = ({ login, isAuthenticated, isAdmin }) => {
+const Login = ({ login, isAuthenticated, updateLogin, isAdmin }) => {
   const [user, setUser] = useState({
     username: "",
     password: "",
   });
-
   const { username, password } = user;
 
   const loginChange = (e) =>
@@ -17,6 +16,8 @@ const Login = ({ login, isAuthenticated, isAdmin }) => {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     login({ username, password });
+    updateLogin(username, password);
+
   };
 
   if (isAuthenticated && isAdmin) {

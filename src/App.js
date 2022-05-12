@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {login} from "./actions/auth";
+
 import NavbarHead from './navbar/navbar.js';
 import Home from './homepage/homepage.js';
 import Admin from './admin/admin.js';
@@ -25,16 +27,35 @@ import { useDispatch, useSelector} from "react-redux"
 const App= () => {
   const dispatch=useDispatch()
   const auth= useSelector((state)=>state.auth)
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+  function updateLoginDetails(username, password) {
 
+    setUser({
+      username: username,
+      password: password
+    })
+    login({ username, password });
+
+    
+
+  }
+  console.log(user.username)
+
+
+  
   return (
       <>
     
-<NavbarHead />
 <Router>
+<NavbarHead />
+
   <Switch>
 
     <Route exact path='/'>
-<Home />
+      <Home />
     </Route>
     
 <Route path='/details' >
@@ -55,7 +76,7 @@ const App= () => {
   <GetBookings />
 </Route>
 <Route path='/login'>
-  <LoginAdmin />
+  <LoginAdmin updateLogin={updateLoginDetails}/>
 </Route>
 <Route path='/signup'>
   <SignUp />

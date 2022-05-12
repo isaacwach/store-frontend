@@ -175,12 +175,12 @@ const Order = () => {
         </form>
         <div>
 
-    <button className="btn" onClick={()=>setShow(true)} >Transport</button>
+    <button className="btn-sm" onClick={()=>setShow(true)} >Transport</button>
         </div>
 
         </div>
 
-
+        {/* <Link to={`booking/order/${id}/details/`}> This </Link> */}
        
         </div>
         </div>
