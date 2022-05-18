@@ -1,0 +1,63 @@
+.me-auto {
+    text-align: right;
+    margin-left: auto;
+   
+}
+.home, .details {
+    color: grey;
+    text-decoration: none;
+
+    
+}
+.btn3{
+    width: 130px;
+    height: 40px;
+    /* background-color: orange; */
+    border-radius: 35px;
+    margin-left: 90px;
+    font-size: 22px;
+    margin-top: 5px;
+}
+.btn4{
+    width: 130px;
+    height: 40px;
+    background-color: rgb(153, 153, 153);
+    border-radius: 35px;
+    margin-left: 110px;
+    font-size: 22px;
+    color: white;
+    margin-top: 5px;
+}
+.home{
+
+    margin-left: 520px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+.details{
+    margin-left: 120px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo{
+    
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.navbar img{
+    width: 50px;
+
+    margin-left: -130px;
+
+}
+.logo-span{
+    color: orange;
+}
+
